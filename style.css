@@ -628,7 +628,6 @@ body.loaded .tijarahub-image {
     color: var(--text-color);
     border-radius: 50%;
     text-decoration: none;
-    padding:  15px;
     transition: opacity 0.4s ease-in-out;
     -webkit-transition: opacity 0.4s ease-in-out;
     -moz-transition: opacity 0.4s ease-in-out;
