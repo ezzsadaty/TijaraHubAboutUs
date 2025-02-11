@@ -617,6 +617,11 @@ body.loaded .tijarahub-image {
 .industry-box .industry-link {
     opacity: 0;
     position: absolute;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     right: 80px;
     bottom: 20px;
     background: var(--accent-color);
