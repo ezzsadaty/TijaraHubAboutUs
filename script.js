@@ -80,4 +80,63 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    const eventTrack = document.querySelector(".event-track");
+    const eventSection = document.querySelector(".event-section");
 
+    const firstEventItem = eventTrack.querySelector(".event-item");
+    const firstEventItemWidth = firstEventItem.offsetWidth;
+
+    let isDragging = false,
+        startX,
+        startScrollLeft,
+        timeoutId;
+
+    const dragStart = (e) => { 
+        isDragging = true;
+        eventTrack.classList.add("dragging");
+        startX = e.pageX;
+        startScrollLeft = eventTrack.scrollLeft;
+    };
+
+    const dragging = (e) => {
+        if (!isDragging) return;
+    
+        const newScrollLeft = startScrollLeft - (e.pageX - startX);
+    
+        if (newScrollLeft <= 0 || newScrollLeft >= 
+            eventTrack.scrollWidth - eventTrack.offsetWidth) {
+            
+            isDragging = false;
+            return;
+        }
+    
+        eventTrack.scrollLeft = newScrollLeft;
+    };
+
+    const dragStop = () => {
+        isDragging = false; 
+        eventTrack.classList.remove("dragging");
+    };
+
+    const autoPlay = () => {
+        if (window.innerWidth < 800) return; 
+        
+        const totalEventWidth = eventTrack.scrollWidth;
+        
+        const maxScrollLeft = totalEventWidth - eventTrack.offsetWidth;
+        
+        if (eventTrack.scrollLeft >= maxScrollLeft) return;
+        
+        timeoutId = setTimeout(() => 
+            eventTrack.scrollLeft += firstEventItemWidth, 2000);
+    };
+
+    eventTrack.addEventListener("mousedown", dragStart);
+    eventTrack.addEventListener("mousemove", dragging);
+    document.addEventListener("mouseup", dragStop);
+    eventSection.addEventListener("mouseenter", () => 
+        clearTimeout(timeoutId));
+    eventSection.addEventListener("mouseleave", autoPlay);
+    autoPlay();
+});

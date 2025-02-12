@@ -7,6 +7,7 @@
     --box-background: #1c1c1c;
     --title-font-size: 80px;
     --subtitle-font-size: 25px;
+    --small-font:12px;
     --large-font: 50px;
     --stat-box-width: 120px;
     --large-stat-box-width: 200px;
@@ -407,93 +408,6 @@ body.loaded .tijarahub-image {
 
 /*/////////*/
 
-/* 
-
-.industry-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    justify-content: space-evenly;
-    box-sizing: border-box;
-}
-
-.industry-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.industry-header {
-    text-align: center;
-    margin-bottom: 20px;
-    position: relative;
-    z-index: 2;
-}
-
-.industry-title {
-    font-size: var(--title-font-size);
-    font-weight: bold;
-    margin: 0;
-    padding: 0;
-}
-
-.industry-subtitle {
-    font-size: var(--subtitle-font-size);
-    color: var(--accent-color);
-    margin: 0;
-    padding: 0;
-}
-
-.industry-container {
-    display: flex;
-    height: 60%;
-    justify-content: center;
-    width: 80%;
-    position: relative;
-    z-index: 2;
-    gap: 10px;
-}
-
-.industry-box {
-    flex: 1;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    transition: flex 0.5s linear;
-    border-radius: 10px;
-    position: relative;
-    box-sizing: border-box;
-}
-
-.industry-box:hover {
-    flex: 2;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top center;
-}
-
-.industry-box:nth-child(1) { background-image: url('industry4.jpg'); }
-.industry-box:nth-child(2) { background-image: url('industry3.jpg'); }
-.industry-box:nth-child(3) { background-image: url('industry4.jpg'); }
-.industry-box:nth-child(4) { background-image: url("industry3.jpg")}
-
-.industry-box::after {
-    content: attr(data-title);
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 18px;
-} */
 .industry-section {
     display: flex;
     flex-direction: column;
@@ -723,4 +637,228 @@ body.loaded .tijarahub-image {
     height: 100%;
     border-radius: 15px;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+/* 
+.wrapper {
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+
+}
+
+.wrapper i {
+    height: 50px;
+    width: 50px;
+    background: rgb(118, 233, 118);
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    font-size: 1.25 rem;
+    transform: translateY(-50%);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+
+}
+
+.wrapper i:first-child {
+    left: -22px;
+
+}
+
+.wrapper i:last-child {
+    right: -22px;
+
+}
+
+.wrapper .carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: 0;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel :where(.card, .img) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.carousel.no-transition {
+    scroll-behavior: auto;
+}
+
+.carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+}
+
+.carousel .card {
+    scroll-snap-align: start;
+    height: 340px;
+    list-style: none;
+    background: #fff;
+    border-radius: 8px;
+    display: flex;
+    cursor: pointer;
+    width: 98%;
+    padding-bottom: 15px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card .img {
+    background: green;
+    width: 145px;
+    height: 145px;
+    border-radius: 50%;
+
+}
+
+.card .img img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #fff;
+}
+
+.card h2 {
+    font-weight: 500;
+    font-size: 1.56rem;
+    margin: 30px 0 5px;
+}
+
+.card span {
+    color: #6a6d78;
+    font-size: 1.31rem;
+
+}
+
+@media screen and (max-width: 900px) {
+    .wrapper .carousel {
+        grid-auto-columns: calc((100% / 2) - 9px);
+
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper .carousel {
+        grid-auto-columns: 100%;
+
+    }
+} */
+.event-section-wrapper{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.event-section-header {
+    text-align: center;
+    margin: 50px 0 0 0 ;
+}
+
+.event-section-title {
+    font-size: var(--title-font-size);
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.event-section-subtitle {
+    font-size: var(--subtitle-font-size);
+    color: var(--accent-color);
+    margin: 0;
+    padding: 0;
+}
+
+.event-section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.event-track {
+    display: grid;
+    grid-auto-flow: column;
+    width: 80%;
+    height: 70%;
+    grid-auto-columns: calc((100% / 4) - 32px);
+    gap: 16px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: 0;
+}
+
+.event-track::-webkit-scrollbar {
+    display: none;
+}
+
+.event-track.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.event-track.no-transition {
+    scroll-behavior: auto;
+}
+
+.event-track.dragging .event-item {
+    cursor: grab;
+    user-select: none;
+}
+
+.event-item {
+    scroll-snap-align: start;
+    box-sizing: border-box;
+    height: 100%;
+    list-style: none;
+    background: #fff;
+    border-radius: 20px;
+    display: flex;
+    cursor: pointer;
+    width: 98%;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.event-item img {
+    width: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 900px) {
+    .event-track {
+        grid-auto-columns: calc((100% / 2) - 9px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .event-track {
+        grid-auto-columns: 100%;
+    }
 }
