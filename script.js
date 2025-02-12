@@ -141,10 +141,10 @@ document.addEventListener("DOMContentLoaded", function () {
 //     autoPlay();
 // });
 
-const wrapper = document.querySelector(".wrapper");
-const carousel = document.querySelector(".carousel");
-const firstCardWidth = carousel.querySelector(".card").offsetWidth;
-const arrowBtns = document.querySelectorAll(".wrapper i");
+const wrapper = document.querySelector(".event-section");
+const carousel = document.querySelector(".event-track");
+const firstCardWidth = carousel.querySelector(".event-item").offsetWidth;
+const arrowBtns = document.querySelectorAll(".event-section i");
 const carouselChildrens = [...carousel.children];
 let isDragging = false, isAutoPlay = true, startX, startScrollLeft, timeoutId;
 // Get the number of cards that can fit in the carousel at once
@@ -203,7 +203,7 @@ const infiniteScroll = () => {
 const autoPlay = () => {
     if(window.innerWidth < 800 || !isAutoPlay) return; // Return if window is smaller than 800 or isAutoPlay is false
     // Autoplay the carousel after every 2500 ms
-    timeoutId = setTimeout(() => carousel.scrollLeft += firstCardWidth, 2500);
+    timeoutId = setTimeout(() => carousel.scrollLeft += firstCardWidth, 2000);
 }
 autoPlay();
 carousel.addEventListener("mousedown", dragStart);

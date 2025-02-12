@@ -23,8 +23,8 @@ body {
     padding: 0;
     scroll-behavior: smooth;
 }
-
-/* *{
+/* 
+*{
     border: var(--border-style);
 } */
 
@@ -653,132 +653,7 @@ body.loaded .tijarahub-image {
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* 
-.wrapper {
-    max-width: 1100px;
-    width: 100%;
-    position: relative;
-
-}
-
-.wrapper i {
-    height: 50px;
-    width: 50px;
-    background: rgb(118, 233, 118);
-    text-align: center;
-    line-height: 50px;
-    border-radius: 50%;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    font-size: 1.25 rem;
-    transform: translateY(-50%);
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
-
-}
-
-.wrapper i:first-child {
-    left: -22px;
-
-}
-
-.wrapper i:last-child {
-    right: -22px;
-
-}
-
-.wrapper .carousel {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: calc((100% / 3) - 12px);
-    gap: 16px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    scrollbar-width: 0;
-}
-
-.carousel::-webkit-scrollbar {
-    display: none;
-}
-
-.carousel :where(.card, .img) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.carousel.dragging {
-    scroll-snap-type: none;
-    scroll-behavior: auto;
-}
-
-.carousel.no-transition {
-    scroll-behavior: auto;
-}
-
-.carousel.dragging .card {
-    cursor: grab;
-    user-select: none;
-}
-
-.carousel .card {
-    scroll-snap-align: start;
-    height: 340px;
-    list-style: none;
-    background: #fff;
-    border-radius: 8px;
-    display: flex;
-    cursor: pointer;
-    width: 98%;
-    padding-bottom: 15px;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.card .img {
-    background: green;
-    width: 145px;
-    height: 145px;
-    border-radius: 50%;
-
-}
-
-.card .img img {
-    width: 140px;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid #fff;
-}
-
-.card h2 {
-    font-weight: 500;
-    font-size: 1.56rem;
-    margin: 30px 0 5px;
-}
-
-.card span {
-    color: #6a6d78;
-    font-size: 1.31rem;
-
-}
-
-@media screen and (max-width: 900px) {
-    .wrapper .carousel {
-        grid-auto-columns: calc((100% / 2) - 9px);
-
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .wrapper .carousel {
-        grid-auto-columns: 100%;
-
-    }
-} */
-.event-section-wrapper {
+/* .event-section-wrapper {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -877,123 +752,188 @@ body.loaded .tijarahub-image {
     .event-track {
         grid-auto-columns: 100%;
     }
-}
+} */
 
-
-.wrapper {
-    max-width: 1100px;
+.event-section-wrapper {
     width: 100%;
-    position: relative;
+    height: 100vh;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.wrapper i {
-    top: 50%;
+.event-section-header {
+    text-align: center;
+    margin: 50px 0 0 0;
+}
+
+.event-section-title {
+    font-size: var(--title-font-size);
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.event-section-subtitle {
+    font-size: var(--subtitle-font-size);
+    color: var(--accent-color);
+    margin: 0;
+    padding: 0;
+}
+.event-section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.event-section i {
     height: 50px;
     width: 50px;
     cursor: pointer;
     font-size: 1.25rem;
-    position: absolute;
+    color: #fff;
     text-align: center;
     line-height: 50px;
-    background: #fff;
+    background: var(--accent-color);
     border-radius: 50%;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
     transform: translateY(-50%);
     transition: transform 0.1s linear;
 }
 
-.wrapper i:active {
+.event-section i:active {
     transform: translateY(-50%) scale(0.85);
+    -webkit-transform: translateY(-50%) scale(0.85);
+    -moz-transform: translateY(-50%) scale(0.85);
+    -ms-transform: translateY(-50%) scale(0.85);
+    -o-transform: translateY(-50%) scale(0.85);
 }
 
-.wrapper i:first-child {
-    left: -22px;
+.event-section i:first-child {
+    z-index: 1;
+    transform: translateX(45%);
+    -webkit-transform: translateX(45%);
+    -moz-transform: translateX(45%);
+    -ms-transform: translateX(45%);
+    -o-transform: translateX(45%);
 }
 
-.wrapper i:last-child {
-    right: -22px;
+.event-section i:last-child {
+    z-index: 1;
+    transform: translateX(-45%);
+    -webkit-transform: translateX(-45%);
+    -moz-transform: translateX(-45%);
+    -ms-transform: translateX(-45%);
+    -o-transform: translateX(-45%);
 }
 
-.wrapper .carousel {
+.event-section .event-track {
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: calc((100% / 3) - 12px);
+    grid-auto-columns: calc((100% / 4) - 12px);
     overflow-x: auto;
     gap: 16px;
+    width: 80%;
+    height: 70%;
     border-radius: 8px;
     scroll-behavior: smooth;
     scrollbar-width: none;
 }
 
-.carousel::-webkit-scrollbar {
+.event-track::-webkit-scrollbar {
     display: none;
 }
 
-.carousel.no-transition {
+.event-track.no-transition {
     scroll-behavior: auto;
 }
 
-.carousel.dragging {
+.event-track.dragging {
     scroll-snap-type: none;
     scroll-behavior: auto;
 }
 
-.carousel.dragging .card {
+.event-track.dragging .event-item {
     cursor: grab;
     user-select: none;
 }
 
-.carousel :where(.card, .img) {
+.event-track :where(.event-item, .img) {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.carousel .card {
+.event-track .event-item {
     scroll-snap-align: start;
-    height: 342px;
+    position: relative;
+    height: 100%;
+    box-sizing: border-box;
+    width: 98%;
     list-style: none;
-    background: #fff;
     cursor: pointer;
     padding-bottom: 15px;
     flex-direction: column;
-    border-radius: 8px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    display: flex;
+    background: url(/industry.jpg) no-repeat center;
+    background-size: cover;
 }
-
-.carousel .card .img {
-    background: #8B53FF;
-    height: 148px;
-    width: 148px;
-    border-radius: 50%;
+.event-item-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    bottom: 30px;
 }
-
-.card .img img {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #fff;
+.event-item-text{
+    width: 70%;
+    gap: 20px;
 }
+a.event-item-link{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-sizing: border-box;
 
-.carousel .card h2 {
-    font-weight: 500;
-    font-size: 1.56rem;
-    margin: 30px 0 5px;
 }
-
-.carousel .card span {
-    color: #6A6D78;
-    font-size: 1.31rem;
+a.event-item-link i{
+    transform: translateX(0) !important;
+    -webkit-transform: translateX(0) !important;
+    -moz-transform: translateX(0) !important;
+    -ms-transform: translateX(0) !important;
+    -o-transform: translateX(0) !important;
 }
-
+.event-item-title,.event-item-subtitle{
+    color: #fff;
+    padding: 0;
+    margin: 0;
+}
 @media screen and (max-width: 900px) {
-    .wrapper .carousel {
+    .event-section .event-track {
         grid-auto-columns: calc((100% / 2) - 9px);
     }
 }
 
 @media screen and (max-width: 600px) {
-    .wrapper .carousel {
+    .event-section .event-track {
         grid-auto-columns: 100%;
     }
 }
