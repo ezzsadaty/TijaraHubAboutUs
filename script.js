@@ -212,3 +212,73 @@ document.addEventListener("mouseup", dragStop);
 carousel.addEventListener("scroll", infiniteScroll);
 wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
 wrapper.addEventListener("mouseleave", autoPlay);
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    let index = 0;
+    const testimonials = document.querySelectorAll(".testimonial-slider");
+    const prevBtn = document.querySelector(".testimonial-nav.left");
+    const nextBtn = document.querySelector(".testimonial-nav.right");
+    const container = document.querySelector(".testimonial-container");
+    let autoSlide;
+
+    function showTestimonial(newIndex) {
+        testimonials.forEach(t => t.classList.remove("active"));
+        testimonials[newIndex].classList.add("active");
+        index = newIndex;
+    }
+
+    function nextTestimonial() {
+        showTestimonial((index + 1) % testimonials.length);
+    }
+
+    function prevTestimonial() {
+        showTestimonial((index - 1 + testimonials.length) % testimonials.length);
+    }
+
+    function startAutoSlide() {
+        autoSlide = setInterval(nextTestimonial, 3000);
+    }
+
+    function stopAutoSlide() {
+        clearInterval(autoSlide);
+    }
+
+    prevBtn.addEventListener("click", function(event) {
+        event.preventDefault();
+        prevTestimonial();
+    });
+    nextBtn.addEventListener("click", function(event) {
+        event.preventDefault();
+        nextTestimonial();
+    });
+
+    container.addEventListener("mouseenter", stopAutoSlide);
+    container.addEventListener("mouseleave", startAutoSlide);
+
+    showTestimonial(index);
+    startAutoSlide();
+});
+
+
+const faqQuestions = document.querySelectorAll('.faq-question');
+
+faqQuestions.forEach(question => {
+    question.addEventListener('click', () => {
+        faqQuestions.forEach(item => {
+            if (item !== question) {
+                item.classList.remove('active');
+                item.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        question.classList.toggle('active');
+        const answer = question.nextElementSibling;
+
+        if (answer.style.maxHeight) {
+            answer.style.maxHeight = null;
+        } else {
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+        }
+    });
+});
