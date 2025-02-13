@@ -1128,15 +1128,15 @@ a.event-item-link i {
 
 .faq-wrapper {
     display: flex;
-    justify-content: center;
+    flex-direction: row-reverse;
+    justify-content: space-between;
     box-sizing: border-box;
-    width: 100%;
-    gap: 20px;
+    width: 80%;
 }
 
 .faq-image {
-    width: 250px;
-    height: 400px;
+    width: 40%;
+    height: 100%;
     background: url('industry2.jpg') no-repeat center center;
     background-size: cover;
     border-radius: 10px;
