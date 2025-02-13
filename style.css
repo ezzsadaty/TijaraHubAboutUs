@@ -1137,7 +1137,7 @@ a.event-item-link i {
 .faq-image {
     width: 250px;
     height: 400px;
-    background: url('/industry2.jpg') no-repeat center center;
+    background: url('industry2.jpg') no-repeat center center;
     background-size: cover;
     border-radius: 10px;
 }
