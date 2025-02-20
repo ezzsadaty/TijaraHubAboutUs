@@ -127,6 +127,19 @@ const dragStop = () => {
     isDragging = false;
     carousel.classList.remove("dragging");
 };
+const autoScroll = () => {
+    autoScrollInterval = setInterval(() => {
+        carousel.scrollBy({ left: firstCardWidth / 2, behavior: "smooth" });
+        if (carousel.scrollLeft + carousel.offsetWidth >= carousel.scrollWidth - firstCardWidth) {
+            carousel.scrollTo({ left: 0, behavior: "smooth" });
+        }
+    }, 3000); 
+};
+
+wrapper.addEventListener("mouseenter", () => clearInterval(autoScrollInterval));
+wrapper.addEventListener("mouseleave", autoScroll);
+
+autoScroll();
 
 carousel.addEventListener("mousedown", dragStart);
 carousel.addEventListener("mousemove", dragging);
