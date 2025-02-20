@@ -348,11 +348,11 @@ body.loaded .tijarahub-image {
         transform: translateX(0);
     }
     to {
-        transform: translateX(-550%);
-        -webkit-transform: translateX(-550%);
-        -moz-transform: translateX(-550%);
-        -ms-transform: translateX(-550%);
-        -o-transform: translateX(-550%);
+        transform: translateX(-450%);
+        -webkit-transform: translateX(-450%);
+        -moz-transform: translateX(-450%);
+        -ms-transform: translateX(-450%);
+        -o-transform: translateX(-450%);
 }
 }
 
