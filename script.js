@@ -1,13 +1,13 @@
+// New Code By Ahmed Start Here
+////////////////////////////////////////////////////////////
 document.addEventListener("DOMContentLoaded", function () {
     document.body.classList.add("loaded");
-
     // Counter Animation
     const counters = document.querySelectorAll(".counter");
     counters.forEach(counter => {
         counter.innerText = '0';
         const target = +counter.getAttribute("data-target");
         const increment = target / 100;
-
         function updateCounter() {
             const current = +counter.innerText;
             if (current < target) {
@@ -19,7 +19,17 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         updateCounter();
     });
+    //short item list hover effect to disable the tooltip
 
+    document.querySelectorAll('.small-service-item[role="img"]').forEach(item => {
+        if (item.hasAttribute('title')) {
+            item.setAttribute('data-title', item.getAttribute('title'));
+            item.removeAttribute('title'); 
+        }
+        item.addEventListener('mouseenter', () => {
+            item.setAttribute('data-title', item.getAttribute('data-title') || "");
+        });
+    });
     // Service Details
     const serviceItems = document.querySelectorAll(".service-item");
     const serviceDetails = document.querySelector(".service-details");
@@ -28,30 +38,30 @@ document.addEventListener("DOMContentLoaded", function () {
     const serviceImage = document.querySelector(".service-details img");
 
     const servicesData = {
-        "Service One": {
-            title: "Service One",
-            description: "Description for Service One.",
-            image: "TijaraHub_Logo.png"
+        "Dedicated Export Sales Team": {
+            title: "Dedicated Export Sales Team",
+            description: "Our expert sales team specializes in global markets, helping you expand your business internationally with tailored export strategies and direct B2B connections.",
+            image: "salesTeam.png"
         },
-        "Service Two": {
-            title: "Service Two",
-            description: "Description for Service Two.",
-            image: "TijaraHub_Logo.png"
+        "Digital Marketing & Offline": {
+            title: "Digital Marketing & Offline",
+            description: "TijaraHub provides businesses with a comprehensive digital marketing strategy designed to enhance brand visibility, generate leads, and drive conversions through digital campaigns, social media, email marketing, and offline trade shows.",
+            image: "comprehensiveMarkting.png"
         },
-        "Service Three": {
-            title: "Service Three",
-            description: "Description for Service Three.",
-            image: "TijaraHub_Logo.png"
+        "360° Market Research & Insights": {
+            title: "360° Market Research & Insights",
+            description: "TijaraHub’s 360 Product Market Research provides in-depth industry analysis, consumer insights, and competitive benchmarking to help businesses identify high-demand products, optimize marketing, and maximize profitability.",
+            image: "360MarketResearch.png"
         },
-        "Service Four": {
-            title: "Service Four",
-            description: "Description for Service Four.",
-            image: "TijaraHub_Logo.png"
+        "Full Support & Customer Services": {
+            title: "Full Support & Customer Services",
+            description: "TijaraHub ensures seamless transactions with dedicated account managers, 24/7 customer service, real-time shipment tracking, and efficient order fulfillment solutions, including storage, packing, and last-mile delivery.",
+            image: "CSR.png"
         }
     };
 
     function setDefaultService() {
-        const defaultService = "Service One";
+        const defaultService = "Dedicated Export Sales Team";
         const serviceData = servicesData[defaultService];
         serviceTitle.textContent = serviceData.title;
         serviceDescription.textContent = serviceData.description;
@@ -72,30 +82,32 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+    
 });
-
 // Event Carousel
 const wrapper = document.querySelector(".event-section");
 const carousel = document.querySelector(".event-track");
-const firstCardWidth = carousel.querySelector(".event-item").offsetWidth;
 const arrowBtns = document.querySelectorAll(".event-section i");
-const carouselChildrens = [...carousel.children];
-let isDragging = false, isAutoPlay = true, startX, startScrollLeft, timeoutId;
-let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
+const firstCardWidth = carousel.querySelector(".event-item").offsetWidth;
+let isDragging = false, startX, startScrollLeft, timeoutId;
 
-carouselChildrens.slice(-cardPerView).reverse().forEach(card => {
-    carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
-});
-carouselChildrens.slice(0, cardPerView).forEach(card => {
-    carousel.insertAdjacentHTML("beforeend", card.outerHTML);
-});
-carousel.classList.add("no-transition");
-carousel.scrollLeft = carousel.offsetWidth;
-carousel.classList.remove("no-transition");
+const updateCardWidth = () => {
+    const screenWidth = window.innerWidth;
+    if (screenWidth < 960) {
+        carousel.style.width = "100%";
+    } else {
+        carousel.style.maxWidth = "1400px";
+    }
+};
+
+// Initialize card width on load
+updateCardWidth();
+window.addEventListener("resize", updateCardWidth);
 
 arrowBtns.forEach(btn => {
     btn.addEventListener("click", () => {
-        carousel.scrollLeft += btn.id === "left" ? -firstCardWidth : firstCardWidth;
+        const scrollAmount = btn.id === "left" ? -firstCardWidth : firstCardWidth;
+        carousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
     });
 });
 
@@ -105,39 +117,34 @@ const dragStart = (e) => {
     startX = e.pageX;
     startScrollLeft = carousel.scrollLeft;
 };
+
 const dragging = (e) => {
     if (!isDragging) return;
     carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
 };
+
 const dragStop = () => {
     isDragging = false;
     carousel.classList.remove("dragging");
 };
-const infiniteScroll = () => {
-    if (carousel.scrollLeft === 0) {
-        carousel.classList.add("no-transition");
-        carousel.scrollLeft = carousel.scrollWidth - (2 * carousel.offsetWidth);
-        carousel.classList.remove("no-transition");
-    } else if (Math.ceil(carousel.scrollLeft) === carousel.scrollWidth - carousel.offsetWidth) {
-        carousel.classList.add("no-transition");
-        carousel.scrollLeft = carousel.offsetWidth;
-        carousel.classList.remove("no-transition");
-    }
-    clearTimeout(timeoutId);
-    if (!wrapper.matches(":hover")) autoPlay();
-};
-const autoPlay = () => {
-    if (window.innerWidth < 800 || !isAutoPlay) return;
-    timeoutId = setTimeout(() => carousel.scrollLeft += firstCardWidth, 2000);
-};
 
-autoPlay();
 carousel.addEventListener("mousedown", dragStart);
 carousel.addEventListener("mousemove", dragging);
 document.addEventListener("mouseup", dragStop);
-carousel.addEventListener("scroll", infiniteScroll);
-wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
-wrapper.addEventListener("mouseleave", autoPlay);
+
+//plan list hover effect to disable the tooltip
+
+document.querySelectorAll('li[role="img"]').forEach(item => {
+    // Store the title attribute in a custom data attribute
+    if (item.hasAttribute('title')) {
+        item.setAttribute('data-title', item.getAttribute('title'));
+        item.removeAttribute('title'); // Remove native tooltip
+    }
+
+    item.addEventListener('mouseenter', () => {
+        item.setAttribute('data-title', item.getAttribute('data-title') || ""); // Ensure tooltip content is not null
+    });
+});
 
 // Testimonials
 const testimonials = document.querySelectorAll(".testimonial-slider");
@@ -171,6 +178,7 @@ container.addEventListener("mouseleave", startAutoSlide);
 showTestimonial(index);
 startAutoSlide();
 
+
 // FAQ Toggle
 const faqQuestions = document.querySelectorAll('.faq-question');
 faqQuestions.forEach(question => {
@@ -186,3 +194,5 @@ faqQuestions.forEach(question => {
         answer.style.maxHeight = answer.style.maxHeight ? null : answer.scrollHeight + 'px';
     });
 });
+// New Code By Ahmed End Here
+////////////////////////////////////////////////////////////
