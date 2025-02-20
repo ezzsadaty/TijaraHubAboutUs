@@ -329,6 +329,9 @@ body.loaded .tijarahub-image {
     margin-top: 30px;
     -ms-overflow-style: none;  
     scrollbar-width: none;  
+    overflow-x: auto; /* Enable scrolling for desktop */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling for touch devices */
+    scroll-behavior: smooth; /* Smooth scroll behavior */  
 }
 .tijarahub-partners::-webkit-scrollbar {
     display: none;
@@ -345,8 +348,12 @@ body.loaded .tijarahub-image {
         transform: translateX(0);
     }
     to {
-        transform: translateX(-50%);
-    }
+        transform: translateX(-550%);
+        -webkit-transform: translateX(-550%);
+        -moz-transform: translateX(-550%);
+        -ms-transform: translateX(-550%);
+        -o-transform: translateX(-550%);
+}
 }
 
 .tijarahub-partners:hover .scroll-container {
@@ -360,6 +367,8 @@ body.loaded .tijarahub-image {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    background-color: var(--box-background);
+
 }
 
 .tijarahub-partner:nth-child(1),
@@ -516,6 +525,25 @@ body.loaded .tijarahub-image {
         height: 70px;
         overflow-x: hidden; /* Disable scrolling for tablets */
     }
+    .scroll-container {
+        display: flex;
+        gap: 10px;
+        animation: scroll 10s linear infinite;
+        -webkit-animation: scroll 10s linear infinite;
+}
+    
+    @keyframes scroll {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-100%);
+            -webkit-transform: translateX(-100%);
+            -moz-transform: translateX(-100%);
+            -ms-transform: translateX(-100%);
+            -o-transform: translateX(-100%);
+}
+    }
 }
 @media (min-width: 960px) {
     .tijarahub-section{
@@ -585,15 +613,33 @@ body.loaded .tijarahub-image {
     .tijarahub-partners {
         gap: 15px;
         margin-top: 30px;
-        overflow-x: auto; /* Enable scrolling for desktop */
-        -webkit-overflow-scrolling: touch; /* Smooth scrolling for touch devices */
-        scroll-behavior: smooth; /* Smooth scroll behavior */
+        overflow-x: auto; 
+        -webkit-overflow-scrolling: touch; 
+        scroll-behavior: smooth; 
     }
     .tijarahub-partner {
         width: 180px;
         height: 80px;
     }
-
+    .scroll-container {
+        display: flex;
+        gap: 10px;
+        animation: scroll 20s linear infinite;
+        -webkit-animation: scroll 20s linear infinite;
+}
+    
+    @keyframes scroll {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+}
+    }
 }
 /*About Us Section End Here*/
 /*------------*/
@@ -1139,19 +1185,19 @@ body.loaded .tijarahub-image {
 }
 
 .industry-box:nth-child(1) {
-    background-image: url('industry3.jpg');
+    background-image: url('cscart.jpg');
 }
 
 .industry-box:nth-child(2) {
-    background-image: url('industry4.jpg');
+    background-image: url('autodrop.jpg');
 }
 
 .industry-box:nth-child(3) {
-    background-image: url('industry3.jpg');
+    background-image: url('mobile-app.jpg');
 }
 
 .industry-box:nth-child(4) {
-    background-image: url('industry4.jpg');
+    background-image: url('caluc.jpg');
 }
 @media (min-width: 768px) and (max-width: 959px){
     .industry-section {
@@ -1750,23 +1796,23 @@ body.loaded .tijarahub-image {
 
 }
 .event-track .event-item:nth-child(4) {
-    background: url(web-summit.jpg) no-repeat center;
+    background: url(web-summit.jpg) no-repeat top center;
     background-size: cover;
 }
 .event-track .event-item:nth-child(5) {
-    background: url(leap.jpg) no-repeat center;
+    background: url(leap.jpg) no-repeat top center;
     background-size: cover;
 }
 .event-track .event-item:nth-child(6) {
-    background: url(riseup.jpg) no-repeat center;
+    background: url(riseup.jpg) no-repeat top center;
     background-size: cover;
 }
 .event-track .event-item:nth-child(7) {
-    background: url(worldef.jpg) no-repeat center;
+    background: url(worldef.jpg) no-repeat top center;
     background-size: cover;
 }
 .event-track .event-item:nth-child(8) {
-    background: url(S-F-S.jpg) no-repeat center;
+    background: url(S-F-S.jpg) no-repeat top center;
     background-size: cover;
 }
 

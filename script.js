@@ -91,19 +91,6 @@ const arrowBtns = document.querySelectorAll(".event-section i");
 const firstCardWidth = carousel.querySelector(".event-item").offsetWidth;
 let isDragging = false, startX, startScrollLeft, timeoutId;
 
-const updateCardWidth = () => {
-    const screenWidth = window.innerWidth;
-    if (screenWidth < 960) {
-        carousel.style.width = "100%";
-    } else {
-        carousel.style.maxWidth = "1400px";
-    }
-};
-
-// Initialize card width on load
-updateCardWidth();
-window.addEventListener("resize", updateCardWidth);
-
 arrowBtns.forEach(btn => {
     btn.addEventListener("click", () => {
         const scrollAmount = btn.id === "left" ? -firstCardWidth : firstCardWidth;
