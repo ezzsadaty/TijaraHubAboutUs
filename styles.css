@@ -329,9 +329,9 @@ body.loaded .tijarahub-image {
     margin-top: 30px;
     -ms-overflow-style: none;  
     scrollbar-width: none;  
-    overflow-x: auto; /* Enable scrolling for desktop */
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling for touch devices */
-    scroll-behavior: smooth; /* Smooth scroll behavior */  
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch; 
+    scroll-behavior: smooth; 
 }
 .tijarahub-partners::-webkit-scrollbar {
     display: none;
@@ -364,101 +364,105 @@ body.loaded .tijarahub-image {
     flex: 0 0 auto;
     width: 100px;
     height: 50px;
+    border-radius: 5px;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     background-color: var(--box-background);
-
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
 
 .tijarahub-partner:nth-child(1),
 .tijarahub-partner:nth-child(10) {
-    background-image: url('google_B.png');
+    background-image: url('Parteners-logos/google.png');
 }
 
 .tijarahub-partner:nth-child(1):hover,
 .tijarahub-partner:nth-child(10):hover {
-    background-image: url('google.png');
+    background-image: url('Parteners-logos/google-hover.png');
 }
 
 .tijarahub-partner:nth-child(2),
 .tijarahub-partner:nth-child(11) {
-    background-image: url('amazon_B.png');
+    background-image: url('Parteners-logos/amazon.png');
 }
 
 .tijarahub-partner:nth-child(2):hover, 
 .tijarahub-partner:nth-child(11):hover {
-    background-image: url('amazon.png');
+    background-image: url('Parteners-logos/amazon-hover.png');
 }
 
 .tijarahub-partner:nth-child(3),
 .tijarahub-partner:nth-child(12) {
-    background-image: url('digitalOcean_B.png');
+    background-image: url('Parteners-logos/digital.png');
 }
 
 .tijarahub-partner:nth-child(3):hover,
 .tijarahub-partner:nth-child(12):hover {
-    background-image: url('digitalOcean.png');
+    background-image: url('Parteners-logos/digital-hover.png');
 }
 
 .tijarahub-partner:nth-child(4),
 .tijarahub-partner:nth-child(13) {
-    background-image: url('Cscart_B.png');
+    background-image: url('Parteners-logos/cscart.png');
 }
 
 .tijarahub-partner:nth-child(4):hover,
 .tijarahub-partner:nth-child(13):hover {
-    background-image: url('Cscart.png');
+    background-image: url('Parteners-logos/cscart-hover.png');
 }
 
 .tijarahub-partner:nth-child(5),
 .tijarahub-partner:nth-child(14) {
-    background-image: url('Searchanise_B.png');
+    background-image: url('Parteners-logos/searchanise.png');
 }
 
 .tijarahub-partner:nth-child(5):hover,
 .tijarahub-partner:nth-child(14):hover {
-    background-image: url('Searchanise.png');
+    background-image: url('Parteners-logos/searchanise-hover.png');
 }
 
 .tijarahub-partner:nth-child(6),
 .tijarahub-partner:nth-child(15) {
-    background-image: url('Arableag_B.png');
+    background-image: url('Parteners-logos/AAST.png');
 }
 
 .tijarahub-partner:nth-child(6):hover,
 .tijarahub-partner:nth-child(15):hover {
-    background-image: url('Arableag.png');
+    background-image: url('Parteners-logos/AAST-Hover.png');
 }
 
 .tijarahub-partner:nth-child(7),
 .tijarahub-partner:nth-child(16) {
-    background-image: url('500_B.png');
+    background-image: url('Parteners-logos/500.png');
 }
 
 .tijarahub-partner:nth-child(7):hover,
 .tijarahub-partner:nth-child(16):hover {
-    background-image: url('500.png');
+    background-image: url('Parteners-logos/500-hover.png');
 }
 
 .tijarahub-partner:nth-child(8),
 .tijarahub-partner:nth-child(17) {
-    background-image: url('plugandplay_B.png');
+    background-image: url('Parteners-logos/plug.png');
 }
 
 .tijarahub-partner:nth-child(8):hover,
 .tijarahub-partner:nth-child(17):hover {
-    background-image: url('plugandplay.png');
+    background-image: url('Parteners-logos/plug-hover.png');
 }
 
 .tijarahub-partner:nth-child(9),
 .tijarahub-partner:nth-child(18) {
-    background-image: url('Raia_FutureTECH_B.png');
+    background-image: url('Parteners-logos/raya.png');
 }
 
 .tijarahub-partner:nth-child(9):hover,
 .tijarahub-partner:nth-child(18):hover {
-    background-image: url('Raia_FutureTECH.png');
+    background-image: url('Parteners-logos/raya-hover.png');
 }
 
 
@@ -739,7 +743,7 @@ body.loaded .tijarahub-image {
     align-items: center;
     background-color: var(--box-background);
     box-sizing: border-box;
-    padding: 20px 5px;
+    padding: 20px 15px;
     gap: 20px;
     border-radius: 10px;
     opacity: 0;
@@ -753,11 +757,8 @@ body.loaded .tijarahub-image {
     -ms-transition: opacity 0.5s ease-in-out;
     -o-transition: opacity 0.5s ease-in-out;
 }
-
-.service-details img {
-    width: 80%;
-    height: 80%;
-    border-radius: 50%;
+.service-details img{
+    width: 100%;
 }
 
 .service-details-content {
@@ -864,6 +865,7 @@ body.loaded .tijarahub-image {
         justify-content: space-between;
         width: 55%;
         gap: 15px;
+        min-height: 625px;
     }
     .service-item {
         padding: 25px;
@@ -877,12 +879,12 @@ body.loaded .tijarahub-image {
         justify-content: center;
         padding: 25px;
         gap: 30px;
-        min-height: 450px;
-        max-height: 450px;
+        min-height: 625px;
+        max-height: 625px;
     }
     .service-details img {
-        width: 60%;
-        height: 60%;
+        width: 100%;
+        height: 100%;
     }
     .service-details-content {
         width: 100%;
@@ -959,7 +961,7 @@ body.loaded .tijarahub-image {
         justify-content: space-between;
         width: 40%;
         gap: 15px;
-        height: 520px;
+        height: 660px;
     }
     .service-item {
         padding: 25px;
@@ -973,13 +975,10 @@ body.loaded .tijarahub-image {
         justify-content: center;
         padding: 25px 60px;
         gap: 30px;
-        min-height: 520px;
-        max-height: 520px;
+        min-height: 660px;
+        max-height: 660px;
     }
-    .service-details img {
-        width: 40%;
-        height: 40%;
-    }
+
     .service-details-content {
         width: 100%;
         max-width: 100%;
@@ -992,6 +991,7 @@ body.loaded .tijarahub-image {
     }
     .service-description {
         font-size: 1.2rem;
+        min-height: 120px;
         line-height: 1.4rem;
         margin-top: 10px;
         color: var(--text-color);
@@ -1018,6 +1018,14 @@ body.loaded .tijarahub-image {
         position: relative;
         cursor: pointer;
     }
+    .small-service-item span {
+        font-size: 1.0rem;
+        line-height: 1.2rem;
+        font-weight: normal;
+        min-height: 45px;
+        color: var(--text-color);
+    }
+
     .small-service-item:hover {
         background-color: var(--accent-color);
     }
@@ -1795,6 +1803,19 @@ body.loaded .tijarahub-image {
     display: flex;
 
 }
+.event-track .event-item:nth-child(1) {
+    background: url(web-summit.jpg) no-repeat top center;
+    background-size: cover;
+}
+.event-track .event-item:nth-child(2) {
+    background: url(web-summit.jpg) no-repeat top center;
+    background-size: cover;
+}
+.event-track .event-item:nth-child(3) {
+    background: url(web-summit.jpg) no-repeat top center;
+    background-size: cover;
+}
+
 .event-track .event-item:nth-child(4) {
     background: url(web-summit.jpg) no-repeat top center;
     background-size: cover;

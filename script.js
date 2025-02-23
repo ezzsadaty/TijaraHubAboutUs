@@ -41,22 +41,27 @@ document.addEventListener("DOMContentLoaded", function () {
         "Dedicated Export Sales Team": {
             title: "Dedicated Export Sales Team",
             description: "Our expert sales team specializes in global markets, helping you expand your business internationally with tailored export strategies and direct B2B connections.",
-            image: "salesTeam.png"
+            image: "export-team.png"
         },
         "Digital Marketing & Offline": {
             title: "Digital Marketing & Offline",
             description: "TijaraHub provides businesses with a comprehensive digital marketing strategy designed to enhance brand visibility, generate leads, and drive conversions through digital campaigns, social media, email marketing, and offline trade shows.",
-            image: "comprehensiveMarkting.png"
+            image: "360Marketing.png"
         },
         "360° Market Research & Insights": {
             title: "360° Market Research & Insights",
             description: "TijaraHub’s 360 Product Market Research provides in-depth industry analysis, consumer insights, and competitive benchmarking to help businesses identify high-demand products, optimize marketing, and maximize profitability.",
-            image: "360MarketResearch.png"
+            image: "market.png"
         },
         "Full Support & Customer Services": {
             title: "Full Support & Customer Services",
             description: "TijaraHub ensures seamless transactions with dedicated account managers, 24/7 customer service, real-time shipment tracking, and efficient order fulfillment solutions, including storage, packing, and last-mile delivery.",
-            image: "CSR.png"
+            image: "custom.png"
+        },
+        "Logistcs Support": {
+            title: "Logistcs Support",
+            description: "TijaraHub ensures seamless logistics with a full range of services, including real-time shipment tracking, efficient order fulfillment, and dedicated account management. Our team handles storage, packing, and last-mile delivery to guarantee timely and cost-effective global shipments.",
+            image: "shipp.png"
         }
     };
 
@@ -116,7 +121,7 @@ const dragStop = () => {
 };
 const autoScroll = () => {
     autoScrollInterval = setInterval(() => {
-        carousel.scrollBy({ left: firstCardWidth / 2, behavior: "smooth" });
+        carousel.scrollBy({ left: firstCardWidth + 10 , behavior: "smooth" });
         if (carousel.scrollLeft + carousel.offsetWidth >= carousel.scrollWidth - firstCardWidth) {
             carousel.scrollTo({ left: 0, behavior: "smooth" });
         }
