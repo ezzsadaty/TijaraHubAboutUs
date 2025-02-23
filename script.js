@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "Digital Marketing & Offline": {
             title: "Digital Marketing & Offline",
             description: "TijaraHub provides businesses with a comprehensive digital marketing strategy designed to enhance brand visibility, generate leads, and drive conversions through digital campaigns, social media, email marketing, and offline trade shows.",
-            image: "360Marketing.png"
+            image: "Digitalmarketing.png"
         },
         "360° Market Research & Insights": {
             title: "360° Market Research & Insights",
