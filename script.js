@@ -150,6 +150,25 @@ document.querySelectorAll('li[role="img"]').forEach(item => {
         item.setAttribute('data-title', item.getAttribute('data-title') || ""); // Ensure tooltip content is not null
     });
 });
+// Get all the partner elements
+const partners = document.querySelectorAll('.tijarahub-partner');
+
+partners.forEach(partner => {
+    const backgroundImage = partner.getAttribute('data-background');
+    const hoverBackgroundImage = partner.getAttribute('data-hover-background');
+    
+    // Set the initial background image
+    partner.style.backgroundImage = `url(${backgroundImage})`;
+
+    // Add hover effect using JavaScript
+    partner.addEventListener('mouseenter', () => {
+        partner.style.backgroundImage = `url(${hoverBackgroundImage})`;
+    });
+
+    partner.addEventListener('mouseleave', () => {
+        partner.style.backgroundImage = `url(${backgroundImage})`;
+    });
+});
 
 // Testimonials
 const testimonials = document.querySelectorAll(".testimonial-slider");
