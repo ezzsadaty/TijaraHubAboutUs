@@ -218,5 +218,12 @@ faqQuestions.forEach(question => {
         answer.style.maxHeight = answer.style.maxHeight ? null : answer.scrollHeight + 'px';
     });
 });
+
+
+// Price Toggle
+    document.getElementById('pricingButton').addEventListener('click', function() {
+    const pricingSection = document.getElementById('pricingSection');
+    pricingSection.scrollIntoView({ behavior: 'smooth' });
+});
 // New Code By Ahmed End Here
 ////////////////////////////////////////////////////////////
