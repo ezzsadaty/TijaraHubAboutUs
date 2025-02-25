@@ -31,9 +31,10 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
-    height: 100vh;
+    height: fit-content;
     padding: 0 20px;
     position: fixed;
+    bottom: 50px;
     z-index: 3;
 }
 .toggle-container i{
@@ -51,7 +52,7 @@ body {
     align-items: center;
     gap: 10px;
     border-radius: 5px;
-    margin-bottom: 100px;
+    margin: 0px;
 }
 
 .toggle-button:hover {
