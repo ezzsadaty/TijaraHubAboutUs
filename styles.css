@@ -58,41 +58,6 @@ body {
 .toggle-button:hover {
     background-color: var(--accent-color);
 }
-@media(min-width: 768px) and (max-width: 959px){
-    
-}
-@media (min-width: 960px){}
-
-/* .toggle-container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    height: 100vh;
-    padding: 0 10px;
-    position: fixed;
-    z-index: 3;
-}
-.toggle-container i{
-    color: #fff;
-}
-.toggle-button {
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    border: none;
-    background-color: #ff5f29;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 5px;
-}
-
-.toggle-button:hover {
-    background-color: var(--accent-color);
-} */
-
 /*------------*/
 /*About Us Section Start Here*/
 
@@ -333,12 +298,17 @@ body.loaded .tijarahub-image {
     margin: 10px 0;
     opacity: 0;
     transform: scale(0.8);
+    border-radius: 20px;
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;
     max-width: 100%;
     -webkit-transition: opacity 1s ease-in-out, transform 1s ease-in-out;
     -moz-transition: opacity 1s ease-in-out, transform 1s ease-in-out;
     -ms-transition: opacity 1s ease-in-out, transform 1s ease-in-out;
     -o-transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
 }
 
 .tijarahub-stats2 {
@@ -439,99 +409,6 @@ body.loaded .tijarahub-image {
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
 }
-
-
-
-/* .tijarahub-partner:nth-child(1),
-.tijarahub-partner:nth-child(10) {
-    background-image: url('Parteners-logos/google.png');
-}
-
-.tijarahub-partner:nth-child(1):hover,
-.tijarahub-partner:nth-child(10):hover {
-    background-image: url('Parteners-logos/google-hover.png');
-}
-
-.tijarahub-partner:nth-child(2),
-.tijarahub-partner:nth-child(11) {
-    background-image: url('Parteners-logos/amazon.png');
-}
-
-.tijarahub-partner:nth-child(2):hover, 
-.tijarahub-partner:nth-child(11):hover {
-    background-image: url('Parteners-logos/amazon-hover.png');
-}
-
-.tijarahub-partner:nth-child(3),
-.tijarahub-partner:nth-child(12) {
-    background-image: url('Parteners-logos/digital.png');
-}
-
-.tijarahub-partner:nth-child(3):hover,
-.tijarahub-partner:nth-child(12):hover {
-    background-image: url('Parteners-logos/digital-hover.png');
-}
-
-.tijarahub-partner:nth-child(4),
-.tijarahub-partner:nth-child(13) {
-    background-image: url('Parteners-logos/cscart.png');
-}
-
-.tijarahub-partner:nth-child(4):hover,
-.tijarahub-partner:nth-child(13):hover {
-    background-image: url('Parteners-logos/cscart-hover.png');
-}
-
-.tijarahub-partner:nth-child(5),
-.tijarahub-partner:nth-child(14) {
-    background-image: url('Parteners-logos/searchanise.png');
-}
-
-.tijarahub-partner:nth-child(5):hover,
-.tijarahub-partner:nth-child(14):hover {
-    background-image: url('Parteners-logos/searchanise-hover.png');
-}
-
-.tijarahub-partner:nth-child(6),
-.tijarahub-partner:nth-child(15) {
-    background-image: url('Parteners-logos/AAST.png');
-}
-
-.tijarahub-partner:nth-child(6):hover,
-.tijarahub-partner:nth-child(15):hover {
-    background-image: url('Parteners-logos/AAST-Hover.png');
-}
-
-.tijarahub-partner:nth-child(7),
-.tijarahub-partner:nth-child(16) {
-    background-image: url('Parteners-logos/500.png');
-}
-
-.tijarahub-partner:nth-child(7):hover,
-.tijarahub-partner:nth-child(16):hover {
-    background-image: url('Parteners-logos/500-hover.png');
-}
-
-.tijarahub-partner:nth-child(8),
-.tijarahub-partner:nth-child(17) {
-    background-image: url('Parteners-logos/plug.png');
-}
-
-.tijarahub-partner:nth-child(8):hover,
-.tijarahub-partner:nth-child(17):hover {
-    background-image: url('Parteners-logos/plug-hover.png');
-}
-
-.tijarahub-partner:nth-child(9),
-.tijarahub-partner:nth-child(18) {
-    background-image: url('Parteners-logos/raya.png');
-}
-
-.tijarahub-partner:nth-child(9):hover,
-.tijarahub-partner:nth-child(18):hover {
-    background-image: url('Parteners-logos/raya-hover.png');
-} */
-
 
 @media(min-width: 768px) and (max-width: 959px){
 .tijarahub-section {
@@ -1889,39 +1766,54 @@ body.loaded .tijarahub-image {
 
 }
 .event-track .event-item:nth-child(1) {
-    background: url(web-summit.jpg) no-repeat top left;
+    background: url(Off-Lun.jpg) no-repeat top center;
     background-size: cover;
 }
 .event-track .event-item:nth-child(2) {
-    background: url(web-summit.jpg) no-repeat top left;
+    background: url(sahara.jpg) no-repeat top left;
     background-size: cover;
 }
+
 .event-track .event-item:nth-child(3) {
     background: url(web-summit.jpg) no-repeat top left;
     background-size: cover;
 }
-
 .event-track .event-item:nth-child(4) {
-    background: url(web-summit.jpg) no-repeat top left;
-    background-size: cover;
-}
-.event-track .event-item:nth-child(5) {
     background: url(leap.jpg) no-repeat top left;
     background-size: cover;
 }
-.event-track .event-item:nth-child(6) {
+.event-track .event-item:nth-child(5) {
     background: url(riseup.jpg) no-repeat top left;
     background-size: cover;
 }
-.event-track .event-item:nth-child(7) {
+.event-track .event-item:nth-child(6) {
     background: url(worldef.jpg) no-repeat top left;
+    background-size: cover;
+}
+.event-track .event-item:nth-child(7) {
+    background: url(S-F-S.jpg) no-repeat top left;
     background-size: cover;
 }
 .event-track .event-item:nth-child(8) {
     background: url(S-F-S.jpg) no-repeat top left;
     background-size: cover;
 }
-
+.event-track .event-item:nth-child(9) {
+    background: url(tech-shift.jpg) no-repeat top left;
+    background-size: cover;
+}
+.event-track .event-item:nth-child(10) {
+    background: url(trade.jpg) no-repeat top center;
+    background-size: cover;
+}
+.event-track .event-item:nth-child(11) {
+    background: url(6M$.jpg) no-repeat top center;
+    background-size: cover;
+}
+.event-track .event-item:nth-child(12) {
+    background: url(gulf.jpg) no-repeat top center;
+    background-size: cover;
+}
 .event-item-content {
     display: flex;
     flex-direction: row;
