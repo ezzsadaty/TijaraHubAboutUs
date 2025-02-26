@@ -1156,15 +1156,15 @@ body.loaded .tijarahub-image {
 }
 
 .industry-box:nth-child(1) {
-    background-image:url('autodrop.jpg') ;
+    background-image:url('api.jpg') ;
 }
 
 .industry-box:nth-child(2) {
-    background-image: url('cscart.jpg');
+    background-image: url('marketing.jpg');
 }
 
 .industry-box:nth-child(3) {
-    background-image: url('mobile-app.jpg');
+    background-image: url('SEO.jpg');
 }
 
 .industry-box:nth-child(4) {
