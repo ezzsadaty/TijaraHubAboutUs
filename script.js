@@ -159,7 +159,7 @@ partners.forEach(partner => {
     
     // Set the initial background image
     partner.style.backgroundImage = `url(${backgroundImage})`;
-
+    if (hoverBackgroundImage == null) return;
     // Add hover effect using JavaScript
     partner.addEventListener('mouseenter', () => {
         partner.style.backgroundImage = `url(${hoverBackgroundImage})`;

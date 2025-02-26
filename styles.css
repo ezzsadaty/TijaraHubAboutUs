@@ -71,7 +71,7 @@ body {
     overflow: hidden;
     box-sizing: border-box;
     background: url('Frame.png') repeat top center;
-    background-color: #000;
+    background-color: var(--background-color);
 }
 
 .tijarahub-wrap {
@@ -590,6 +590,7 @@ body.loaded .tijarahub-image {
 }
     }
 }
+
 /*About Us Section End Here*/
 /*------------*/
 
