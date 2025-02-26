@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
     setDefaultService();
 
     serviceItems.forEach(item => {
-        item.addEventListener("click", function () {
+        item.addEventListener("mouseover", function () {
             const serviceName = item.textContent.trim();
             const serviceData = servicesData[serviceName];
             if (serviceData) {
