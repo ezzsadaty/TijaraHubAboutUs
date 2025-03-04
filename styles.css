@@ -2401,7 +2401,7 @@ ul.pricing-features-ul li.bg{
     ul.pricing-features-ul li{
         font-size: 0.8rem;
         line-height: 1rem;
-        min-height: 40px;
+        min-height: 45px;
     }
     ul.pricing-features-ul li i::after {
         width: 300px;
@@ -2414,10 +2414,11 @@ ul.pricing-features-ul li.bg{
     ul.pricing-features-ul li.line{
         font-size: 1rem;
         line-height: 1.2rem;
-        min-height: 40px;
+        min-height: 65px;
     }
     ul.pricing-features-ul li.bg{
         margin-top: 10px;
+        min-height: 65px;
     }
     .pricing-button-plan{
         padding:20px 5px;
@@ -2502,7 +2503,18 @@ ul.pricing-features-ul li.bg{
     ul.pricing-features-ul li i::after {
         width: 500px;
     }
-
+    ul.pricing-features-ul li{
+        font-size: 0.7rem;
+        line-height: 0.9rem;
+        min-height: 40px;
+        
+    }
+    ul.pricing-features-ul li.line{
+        min-height: 35px;
+    }
+    ul.pricing-features-ul li.bg{
+        min-height: 35px;
+    }
     .pricing-container {
         width: 80%;
         flex-direction: row;
@@ -2527,16 +2539,7 @@ ul.pricing-features-ul li.bg{
         font-size: 1.2rem;
         line-height: 1.4rem;
     }
-    ul.pricing-features-ul li{
-        font-size: 0.7rem;
-        line-height: 0.9rem;
-        min-height: 35px;
-        
-    }
-    ul.pricing-features-ul li.line{
-        min-height: 35px;
-    }
-
+    
     li[role="img"] {
         font-size: 16px;
         line-height: 1.5;
