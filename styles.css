@@ -2090,6 +2090,7 @@ ul.pricing-features-ul li i::after {
     background: var(--accent-color);
     color: #fff;
     font-size: 14px;
+    line-height: 19px;
     padding: 6px 10px;
     border-radius: 4px;
     width: 280px;
