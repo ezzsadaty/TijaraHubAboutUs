@@ -2578,7 +2578,7 @@ ul.pricing-features-ul li.bg{
     }
     ul.pricing-features-ul li.bg{
         margin-top: 10px;
-        min-height: 55;
+        min-height: 55px;
     }
     .pricing-button-plan:active,
     .pricing-button-plan:link,
