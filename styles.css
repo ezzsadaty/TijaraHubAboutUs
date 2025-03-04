@@ -2574,10 +2574,11 @@ ul.pricing-features-ul li.bg{
     ul.pricing-features-ul li.line{
         font-size: 1.3rem;
         line-height: 1.2rem;
-        min-height: 45px;
+        min-height: 55px;
     }
     ul.pricing-features-ul li.bg{
         margin-top: 10px;
+        min-height: 55;
     }
     .pricing-button-plan:active,
     .pricing-button-plan:link,
