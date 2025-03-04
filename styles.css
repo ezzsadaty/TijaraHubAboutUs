@@ -2076,7 +2076,45 @@ ul.Both-Plans li p.desc{
     line-height: 1.1rem;
 }
 
+ul.pricing-features-ul li i{
+    position: relative;
+}
 
+ul.pricing-features-ul li i::after {
+    content: attr(data-title);
+    /*Usedata-titleinsteadoftitle*/position: absolute;
+    left: 50%;
+    top: 100%;
+    margin-top: 20px;
+    transform: translateX(-50%);
+    background: var(--accent-color);
+    color: #fff;
+    font-size: 14px;
+    padding: 6px 10px;
+    border-radius: 4px;
+    width: 280px;
+    white-space: wrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out;
+    z-index: 1;
+    font-family: "montserrat";
+    font-weight: normal;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    box-sizing: border-box;
+}
+
+ul.pricing-features-ul li i:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
 .plans-buttons {
     width: 100%;
     max-width: 100%;
@@ -2231,6 +2269,7 @@ ul.pricing-features-ul li{
     font-size: 0.6rem;
     line-height: 0.8rem;
     color: #fff;
+    min-height: 30px;
 }
 
 ul.pricing-features-ul li.line{
@@ -2239,6 +2278,8 @@ ul.pricing-features-ul li.line{
     color: var(--accent-color);
     font-weight: 700;
     margin-top: 10px;
+    min-height: 30px;
+
 }
 ul.pricing-features-ul li.bg{
     margin-top: 10px;
@@ -2360,13 +2401,20 @@ ul.pricing-features-ul li.bg{
     ul.pricing-features-ul li{
         font-size: 0.8rem;
         line-height: 1rem;
+        min-height: 35px;
+    }
+    ul.pricing-features-ul li i::after {
+        width: 300px;
+        box-sizing: border-box;
     }
     ul.pricing-features-ul li i{    
         font-size: 1.1rem;
+
     }
     ul.pricing-features-ul li.line{
         font-size: 1rem;
         line-height: 1.2rem;
+        min-height: 35px;
     }
     ul.pricing-features-ul li.bg{
         margin-top: 10px;
@@ -2451,6 +2499,10 @@ ul.pricing-features-ul li.bg{
         line-height: 1.1rem;
         display: none;
     }
+    ul.pricing-features-ul li i::after {
+        width: 500px;
+    }
+
     .pricing-container {
         width: 80%;
         flex-direction: row;
@@ -2478,7 +2530,10 @@ ul.pricing-features-ul li.bg{
     ul.pricing-features-ul li{
         font-size: 0.7rem;
         line-height: 0.9rem;
+        min-height: 29px;
+        
     }
+ 
     li[role="img"] {
         font-size: 16px;
         line-height: 1.5;
@@ -2502,17 +2557,18 @@ ul.pricing-features-ul li.bg{
         width: 75%;
         margin: 0;
     }
+    
 }
 @media (min-width: 1200px){
     ul.pricing-features-ul li{
         font-size: 1rem;
         line-height: 1.2rem;
-        min-height: 30px;
+        min-height: 38px;
     }
     ul.pricing-features-ul li.line{
         font-size: 1.3rem;
         line-height: 1.2rem;
-        min-height: 30px;
+        min-height: 38px;
     }
     ul.pricing-features-ul li.bg{
         margin-top: 10px;

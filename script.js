@@ -38,19 +38,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const serviceImage = document.querySelector(".service-details img");
 
     const servicesData = {
-        "Dedicated Export Sales Team": {
-            title: "Dedicated Export Sales Team",
-            description: "Our expert sales team specializes in global markets, helping you expand your business internationally with tailored export strategies and direct B2B connections.",
+        "International Export Sales": {
+            title: "International Export Sales",
+            description: "Our export sales team are a global experts with extensive industry connections. TijaraHub provides their fixed salaries, while manufacturers fund their commissions. This structure ensures manufacturers have direct access to dedicated export professionals.",
             image: "export-team.png"
         },
         "Digital Marketing & Offline": {
             title: "Digital Marketing & Offline",
-            description: "TijaraHub provides businesses with a comprehensive digital marketing strategy designed to enhance brand visibility, generate leads, and drive conversions through digital campaigns, social media, email marketing, and offline trade shows.",
+            description: "Engage manufacturers instantly with our Push Notifications feature, delivering timely updates and personalized content directly to their devices to enhances user engagement, boosts retention, and drives conversions. Our Events & Trade Missions service connects your business with international markets through curated events and missions to explore new markets, establish partnerships, and gain insights into global opportunities",
             image: "Digitalmarketing.png"
         },
-        "360° Market Research & Insights": {
-            title: "360° Market Research & Insights",
-            description: "TijaraHub’s 360 Product Market Research provides in-depth industry analysis, consumer insights, and competitive benchmarking to help businesses identify high-demand products, optimize marketing, and maximize profitability.",
+        "Tailor made Market Research": {
+            title: "Tailor made Market Research",
+            description: "Our 360 Market Research & Insights service offers in-depth analysis of market trends, shelf prices, and competitors. Our Market Behavior Study analyzes how consumers and businesses act in the market. By examining purchasing habits and decision-making processes.",
             image: "market.png"
         },
         "Full Support & Customer Services": {
@@ -58,15 +58,15 @@ document.addEventListener("DOMContentLoaded", function () {
             description: "TijaraHub ensures seamless transactions with dedicated account managers, 24/7 customer service, real-time shipment tracking, and efficient order fulfillment solutions, including storage, packing, and last-mile delivery.",
             image: "custom.png"
         },
-        "Logistcs Support": {
-            title: "Logistcs Support",
-            description: "TijaraHub ensures seamless logistics with a full range of services, including real-time shipment tracking, efficient order fulfillment, and dedicated account management. Our team handles storage, packing, and last-mile delivery to guarantee timely and cost-effective global shipments.",
+        "Logistics Support for Door to Door": {
+            title: "Logistcs Support for Door to Door",
+            description: "Our supply chain team offers a simple, safe, door-to-door logistics solution. Through partnerships with international shipping, insurance, and quality assurance companies, we handle cross-border complexities. Buyers pay a fee for this hassle-free service.",
             image: "shipp.png"
         }
     };
 
     function setDefaultService() {
-        const defaultService = "Dedicated Export Sales Team";
+        const defaultService = "International Export Sales";
         const serviceData = servicesData[defaultService];
         serviceTitle.textContent = serviceData.title;
         serviceDescription.textContent = serviceData.description;
