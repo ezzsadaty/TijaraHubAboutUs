@@ -1474,19 +1474,40 @@ body.loaded .tijarahub-image {
 
 .digital-marketing-service-box {
     background-color: var(--box-background);
-    padding: 20px 5px;
+    padding: 20px 10px;
     border-radius: 10px;
-    text-align: center;
+    text-align: start;
     font-weight: 700;
     transition: transform 0.3s ease-in-out;
     color: #fff;
     font-size: 1.1rem;
     line-height: 1.3rem;
 }
-
+.digital-marketing-service-box strong{
+    /*color: var(--accent-color);*/
+    font-size: 3rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+}
 .digital-marketing-service-box:hover {
     transform: scale(1.1);
     background-color: var(--accent-color);
+}
+.source-credit {
+    font-size: 14px;
+    color: var(--text-color);
+    text-align: start;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.source-credit a {
+    color: var(--accent-color); /* Adjust link color */
+    text-decoration: none;
+}
+
+.source-credit a:hover {
+    text-decoration: underline;
 }
 
 .digital-marketing-dashboard {
@@ -1619,13 +1640,13 @@ body.loaded .tijarahub-image {
     }
     
     .digital-marketing-services {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 20px;
         width: 100%;
     }
     
     .digital-marketing-service-box {
-        padding: 20px 5px;
+        padding: 20px 15px;
     }
     
     .digital-marketing-dashboard {
