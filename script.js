@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll('.small-service-item[role="img"]').forEach(item => {
         if (item.hasAttribute('title')) {
             item.setAttribute('data-title', item.getAttribute('title'));
-            item.removeAttribute('title'); 
+            item.removeAttribute('title');
         }
         item.addEventListener('mouseenter', () => {
             item.setAttribute('data-title', item.getAttribute('data-title') || "");
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
-    
+
 });
 // Event Carousel
 const wrapper = document.querySelector(".event-section");
@@ -121,11 +121,11 @@ const dragStop = () => {
 };
 const autoScroll = () => {
     autoScrollInterval = setInterval(() => {
-        carousel.scrollBy({ left: firstCardWidth + 10 , behavior: "smooth" });
+        carousel.scrollBy({ left: firstCardWidth + 10, behavior: "smooth" });
         if (carousel.scrollLeft + carousel.offsetWidth >= carousel.scrollWidth - firstCardWidth) {
             carousel.scrollTo({ left: 0, behavior: "smooth" });
         }
-    }, 3000); 
+    }, 3000);
 };
 
 wrapper.addEventListener("mouseenter", () => clearInterval(autoScrollInterval));
@@ -156,7 +156,7 @@ const partners = document.querySelectorAll('.tijarahub-partner');
 partners.forEach(partner => {
     const backgroundImage = partner.getAttribute('data-background');
     const hoverBackgroundImage = partner.getAttribute('data-hover-background');
-    
+
     // Set the initial background image
     partner.style.backgroundImage = `url(${backgroundImage})`;
     if (hoverBackgroundImage == null) return;
@@ -221,7 +221,7 @@ faqQuestions.forEach(question => {
 
 
 // Price Toggle
-    document.getElementById('pricingButton').addEventListener('click', function() {
+document.getElementById('pricingButton').addEventListener('click', function () {
     const pricingSection = document.getElementById('pricingSection');
     pricingSection.scrollIntoView({ behavior: 'smooth' });
 });
