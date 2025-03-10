@@ -1918,62 +1918,62 @@ body.loaded .tijarahub-image {
 }
 
 .event-track .event-item:nth-child(1) {
-    background: url(Off-Lun.jpg) no-repeat top center;
+    background: url(event/Off-Lun.jpg) no-repeat top center;
     background-size: cover;
 }
 
 .event-track .event-item:nth-child(2) {
-    background: url(sahara.jpg) no-repeat top left;
+    background: url(event/sahara.jpg) no-repeat top left;
     background-size: cover;
 }
 
 .event-track .event-item:nth-child(3) {
-    background: url(web-summit.jpg) no-repeat top left;
+    background: url(event/web-summit.jpg) no-repeat top left;
     background-size: cover;
 }
 
 .event-track .event-item:nth-child(4) {
-    background: url(leap.jpg) no-repeat top left;
+    background: url(event/leap.jpg) no-repeat top left;
     background-size: cover;
 }
 
 .event-track .event-item:nth-child(5) {
-    background: url(riseup.jpg) no-repeat top left;
+    background: url(event/riseup.jpg) no-repeat top left;
     background-size: cover;
 }
 
 .event-track .event-item:nth-child(6) {
-    background: url(worldef.jpg) no-repeat top left;
+    background: url(event/worldef.jpg) no-repeat top left;
     background-size: cover;
 }
 
 .event-track .event-item:nth-child(7) {
-    background: url(S-F-S.jpg) no-repeat top left;
+    background: url(event/S-F-S.jpg) no-repeat top left;
     background-size: cover;
 }
 
 .event-track .event-item:nth-child(8) {
-    background: url(food.jpg) no-repeat top left;
+    background: url(event/food.jpg) no-repeat top left;
     background-size: cover;
 }
 
 .event-track .event-item:nth-child(9) {
-    background: url(tech-shift.jpg) no-repeat top left;
+    background: url(event/tech-shift.jpg) no-repeat top left;
     background-size: cover;
 }
 
 .event-track .event-item:nth-child(10) {
-    background: url(trade.jpg) no-repeat top center;
+    background: url(event/trade.jpg) no-repeat top center;
     background-size: cover;
 }
 
 .event-track .event-item:nth-child(11) {
-    background: url(6M$.jpg) no-repeat top center;
+    background: url(event/6M$.jpg) no-repeat top center;
     background-size: cover;
 }
 
 .event-track .event-item:nth-child(12) {
-    background: url(gulf.jpg) no-repeat top center;
+    background: url(event/gulf.jpg) no-repeat top center;
     background-size: cover;
 }
 

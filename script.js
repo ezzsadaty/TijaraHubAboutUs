@@ -41,27 +41,27 @@ document.addEventListener("DOMContentLoaded", function () {
         "International Export Sales": {
             title: "International Export Sales",
             description: "Our export sales team are a global experts with extensive industry connections. TijaraHub provides their fixed salaries, while manufacturers fund their commissions. This structure ensures manufacturers have direct access to dedicated export professionals.",
-            image: "export-team.png"
+            image: "serv/export-team.png"
         },
         "Digital Marketing & Offline": {
             title: "Digital Marketing & Offline",
             description: "Engage manufacturers instantly with our Push Notifications feature, delivering timely updates and personalized content directly to their devices to enhances user engagement, boosts retention, and drives conversions. Our Events & Trade Missions service connects your business with international markets through curated events and missions to explore new markets, establish partnerships, and gain insights into global opportunities",
-            image: "Digitalmarketing.png"
+            image: "serv/Digitalmarketing.png"
         },
         "Tailor made Market Research": {
             title: "Tailor made Market Research",
             description: "Our 360 Market Research & Insights service offers in-depth analysis of market trends, shelf prices, and competitors. Our Market Behavior Study analyzes how consumers and businesses act in the market. By examining purchasing habits and decision-making processes.",
-            image: "market.png"
+            image: "serv/market.png"
         },
         "Full Support & Customer Services": {
             title: "Full Support & Customer Services",
             description: "TijaraHub ensures seamless transactions with dedicated account managers, 24/7 customer service, real-time shipment tracking, and efficient order fulfillment solutions, including storage, packing, and last-mile delivery.",
-            image: "custom.png"
+            image: "serv/custom.png"
         },
         "Logistics Support for Door to Door": {
             title: "Logistcs Support for Door to Door",
             description: "Our supply chain team offers a simple, safe, door-to-door logistics solution. Through partnerships with international shipping, insurance, and quality assurance companies, we handle cross-border complexities. Buyers pay a fee for this hassle-free service.",
-            image: "shipp.png"
+            image: "serv/shipp.png"
         }
     };
 
