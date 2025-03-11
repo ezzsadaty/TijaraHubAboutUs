@@ -1,6 +1,11 @@
 // New Code By Ahmed Start Here
 ////////////////////////////////////////////////////////////
 document.addEventListener("DOMContentLoaded", function () {
+    let isRTL = document.documentElement.getAttribute("dir") === "rtl";
+
+    if (isRTL) {
+        
+    }
     document.body.classList.add("loaded");
     // Counter Animation
     const counters = document.querySelectorAll(".counter");
@@ -37,36 +42,70 @@ document.addEventListener("DOMContentLoaded", function () {
     const serviceDescription = document.querySelector(".service-description");
     const serviceImage = document.querySelector(".service-details img");
 
-    const servicesData = {
+    const servicesDataEN = {
         "International Export Sales": {
             title: "International Export Sales",
-            description: "Our export sales team are a global experts with extensive industry connections. TijaraHub provides their fixed salaries, while manufacturers fund their commissions. This structure ensures manufacturers have direct access to dedicated export professionals.",
+            description: "Our export sales team are global experts with extensive industry connections. TijaraHub provides their fixed salaries, while manufacturers fund their commissions. This structure ensures manufacturers have direct access to dedicated export professionals.",
             image: "serv/export-team.png"
         },
         "Digital Marketing & Offline": {
             title: "Digital Marketing & Offline",
-            description: "Engage manufacturers instantly with our Push Notifications feature, delivering timely updates and personalized content directly to their devices to enhances user engagement, boosts retention, and drives conversions. Our Events & Trade Missions service connects your business with international markets through curated events and missions to explore new markets, establish partnerships, and gain insights into global opportunities",
+            description: "Engage manufacturers instantly with our Push Notifications feature, delivering timely updates and personalized content directly to their devices. Our Events & Trade Missions service connects your business with international markets through curated events and missions.",
             image: "serv/Digitalmarketing.png"
         },
         "Tailor made Market Research": {
             title: "Tailor made Market Research",
-            description: "Our 360 Market Research & Insights service offers in-depth analysis of market trends, shelf prices, and competitors. Our Market Behavior Study analyzes how consumers and businesses act in the market. By examining purchasing habits and decision-making processes.",
+            description: "Our 360 Market Research & Insights service offers in-depth analysis of market trends, shelf prices, and competitors. Our Market Behavior Study analyzes how consumers and businesses act in the market.",
             image: "serv/market.png"
         },
         "Full Support & Customer Services": {
             title: "Full Support & Customer Services",
-            description: "TijaraHub ensures seamless transactions with dedicated account managers, 24/7 customer service, real-time shipment tracking, and efficient order fulfillment solutions, including storage, packing, and last-mile delivery.",
+            description: "TijaraHub ensures seamless transactions with dedicated account managers, 24/7 customer service, real-time shipment tracking, and efficient order fulfillment solutions.",
             image: "serv/custom.png"
         },
         "Logistics Support for Door to Door": {
-            title: "Logistcs Support for Door to Door",
-            description: "Our supply chain team offers a simple, safe, door-to-door logistics solution. Through partnerships with international shipping, insurance, and quality assurance companies, we handle cross-border complexities. Buyers pay a fee for this hassle-free service.",
+            title: "Logistics Support for Door to Door",
+            description: "Our supply chain team offers a simple, safe, door-to-door logistics solution. Through partnerships with international shipping, insurance, and quality assurance companies, we handle cross-border complexities.",
             image: "serv/shipp.png"
         }
     };
 
+    // Service Data in Arabic
+    const servicesDataAR = {
+        "مندوب مبيعات التصدير الدولي": {
+            title: "مندوب مبيعات التصدير الدولي",
+            description: "فريق مبيعات التصدير لدينا خبراء عالميون ولديهم اتصالات واسعة في الصناعة. توفر TijaraHub رواتبهم الثابتة، بينما يقوم المصنعون بتمويل عمولاتهم. يضمن هذا الهيكل وصول المصنعين مباشرةً إلى محترفي التصدير المتفانين.",
+            image: "serv/export-team.png"
+        },
+        "التسويق الرقمي": {
+            title: "التسويق الرقمي",
+            description: "قم بإشراك المصنعين فورًا من خلال ميزة الإشعارات الفورية لدينا، والتي توفر تحديثات مخصصة مباشرة إلى أجهزتهم. تربط خدمة الأحداث والبعثات التجارية أعمالك بالأسواق الدولية من خلال فعاليات ومهام مخصصة.",
+            image: "serv/Digitalmarketing.png"
+        },
+        "أبحاث السوق المصممة خصيصًا": {
+            title: "أبحاث السوق المصممة خصيصًا",
+            description: "تقدم خدمة أبحاث السوق والرؤى الخاصة بنا تحليلًا متعمقًا لاتجاهات السوق وأسعار الرفوف والمنافسين. كما يقوم تحليل سلوك السوق لدينا بدراسة كيفية تصرف المستهلكين والشركات في السوق.",
+            image: "serv/market.png"
+        },
+        "الدعم الكامل وخدمات العملاء": {
+            title: "الدعم الكامل وخدمات العملاء",
+            description: "تضمن TijaraHub معاملات سلسة مع مديري حسابات مخصصين، وخدمة عملاء على مدار الساعة، وتتبع الشحنات في الوقت الفعلي، وحلول تنفيذ الطلبات بكفاءة.",
+            image: "serv/custom.png"
+        },
+        "الدعم اللوجستي من الباب إلى الباب": {
+            title: "الدعم اللوجستي من الباب إلى الباب",
+            description: "يقدم فريق سلسلة التوريد لدينا حلاً لوجستيًا بسيطًا وآمنًا من الباب إلى الباب. من خلال الشراكات مع شركات الشحن الدولية والتأمين وضمان الجودة، نتعامل مع تعقيدات التجارة عبر الحدود.",
+            image: "serv/shipp.png"
+        }
+    };
+
+    // Choose the correct service data based on RTL or LTR
+    const servicesData = isRTL ? servicesDataAR : servicesDataEN;
+
+
     function setDefaultService() {
-        const defaultService = "International Export Sales";
+        //const defaultService = "International Export Sales";
+        const defaultService = isRTL ? "مندوب مبيعات التصدير الدولي" : "International Export Sales";
         const serviceData = servicesData[defaultService];
         serviceTitle.textContent = serviceData.title;
         serviceDescription.textContent = serviceData.description;

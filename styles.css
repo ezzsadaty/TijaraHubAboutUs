@@ -415,7 +415,23 @@ body.loaded .tijarahub-image {
         -o-transform: translateX(-350%);
     }
 }
+html[dir="rtl"] .scroll-container {
+    animation: scrollrtl 30s linear infinite;
+    -webkit-animation: scrollrtl 30s linear infinite;
+}
+@keyframes scrollrtl {
+    from {
+        transform: translateX(0);
+    }
 
+    to {
+        transform: translateX(350%);
+        -webkit-transform: translateX(350%);
+        -moz-transform: translateX(350%);
+        -ms-transform: translateX(350%);
+        -o-transform: translateX(350%);
+    }
+}
 .tijarahub-partners:hover .scroll-container {
     animation-play-state: paused;
 }
@@ -527,6 +543,23 @@ body.loaded .tijarahub-image {
             -ms-transform: translateX(-100%);
             -o-transform: translateX(-100%);
         }
+    }
+    html[dir="rtl"] .scroll-container {
+        animation: scrollrtl 10s linear infinite;
+        -webkit-animation: scrollrtl 10s linear infinite;
+}
+    @keyframes scrollrtl {
+        from {
+            transform: translateX(0);
+        }
+    
+        to {
+            transform: translateX(100%);
+            -webkit-transform: translateX(100%);
+            -moz-transform: translateX(100%);
+            -ms-transform: translateX(100%);
+            -o-transform: translateX(100%);
+}
     }
 }
 
@@ -645,6 +678,23 @@ body.loaded .tijarahub-image {
             -ms-transform: translateX(-70%);
             -o-transform: translateX(-70%);
         }
+    }
+    html[dir="rtl"] .scroll-container {
+        animation: scrollrtl 20s linear infinite;
+        -webkit-animation: scrollrtl 20s linear infinite;
+}
+    @keyframes scrollrtl {
+        from {
+            transform: translateX(0);
+        }
+    
+        to {
+            transform: translateX(70%);
+            -webkit-transform: translateX(70%);
+            -moz-transform: translateX(70%);
+            -ms-transform: translateX(70%);
+            -o-transform: translateX(70%);
+}
     }
 }
 
@@ -2244,6 +2294,10 @@ ul.Both-Plans li p.desc {
 
 ul.pricing-features-ul li i {
     position: relative;
+}
+html[dir="rtl"] ul.pricing-features-ul li i{
+    margin-right: 10px;
+    margin-left: 0;
 }
 
 ul.pricing-features-ul li i::after {
