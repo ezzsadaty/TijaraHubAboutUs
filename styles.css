@@ -3654,6 +3654,72 @@ html[dir="rtl"] .faq-question.active .arrow {
     /* Missing comma before this line */
     clip-path: circle(150% at 0% 100%);
 }
+#eight:checked~.img-1 img,
+#eight:checked~.img-2 img,
+#eight:checked~.img-3 img,
+#eight:checked~.img-4 img,
+#eight:checked~.img-5 img,
+#eight:checked~.img-6 img,
+#eight:checked~.img-7 img,
+#eight:checked~.img-8 img {
+    clip-path: circle(150% at 0% 100%);
+}
+/* When the ninth radio button is checked */
+#nine:checked~.img-1 img,
+#nine:checked~.img-2 img,
+#nine:checked~.img-3 img,
+#nine:checked~.img-4 img,
+#nine:checked~.img-5 img,
+#nine:checked~.img-6 img,
+#nine:checked~.img-7 img,
+#nine:checked~.img-8 img,
+#nine:checked~.img-9 img {
+    clip-path: circle(150% at 0% 100%);
+}
+
+/* When the tenth radio button is checked */
+#ten:checked~.img-1 img,
+#ten:checked~.img-2 img,
+#ten:checked~.img-3 img,
+#ten:checked~.img-4 img,
+#ten:checked~.img-5 img,
+#ten:checked~.img-6 img,
+#ten:checked~.img-7 img,
+#ten:checked~.img-8 img,
+#ten:checked~.img-9 img,
+#ten:checked~.img-10 img {
+    clip-path: circle(150% at 0% 100%);
+}
+#eleven:checked~.img-1 img,
+#eleven:checked~.img-2 img,
+#eleven:checked~.img-3 img,
+#eleven:checked~.img-4 img,
+#eleven:checked~.img-5 img,
+#eleven:checked~.img-6 img,
+#eleven:checked~.img-7 img,
+#eleven:checked~.img-8 img,
+#eleven:checked~.img-9 img,
+#eleven:checked~.img-10 img,
+#eleven:checked~.img-11 img {
+    clip-path: circle(150% at 0% 100%);
+}
+
+/* When the twelfth radio button is checked */
+#twelve:checked~.img-1 img,
+#twelve:checked~.img-2 img,
+#twelve:checked~.img-3 img,
+#twelve:checked~.img-4 img,
+#twelve:checked~.img-5 img,
+#twelve:checked~.img-6 img,
+#twelve:checked~.img-7 img,
+#twelve:checked~.img-8 img,
+#twelve:checked~.img-9 img,
+#twelve:checked~.img-10 img,
+#twelve:checked~.img-11 img,
+#twelve:checked~.img-12 img {
+    clip-path: circle(150% at 0% 100%);
+}
+
 /* Slider controls container */
 .wrapper .sliders {
     position: absolute;
@@ -3682,13 +3748,16 @@ html[dir="rtl"] .faq-question.active .arrow {
 #four:checked~.sliders label.four,
 #five:checked~.sliders label.five,
 #six:checked~.sliders label.six,
-#seven:checked~.sliders label.seven {
-    /* Missing comma before this line */
+#seven:checked~.sliders label.seven,
+#eight:checked~.sliders label.eight,
+#nine:checked~.sliders label.nine,
+#ten:checked~.sliders label.ten,
+#eleven:checked~.sliders label.eleven,
+#twelve:checked~.sliders label.twelve{
     width: 35px;
     border-radius: 14px;
     background: var(--accent-color);
 }
-
 /* Hover effect for slider labels */
 .sliders label:hover {
     background: var(--accent-color);
