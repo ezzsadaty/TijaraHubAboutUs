@@ -173,6 +173,11 @@ div.tijarahub-section div.homepagebox h2 {
 }
 
 
+[dir="rtl"] .changingtext::before {
+    content: "آمن";
+    /* Default Arabic text */
+}
+
 @keyframes mychangea {
     0% {
         content: "Safe";
@@ -253,6 +258,94 @@ div.tijarahub-section div.homepagebox h2 {
         content: "Safe";
         opacity: 0;
     }
+}
+
+/* Arabic Animation for RTL */
+@keyframes mychangea-rtl {
+    0% {
+        content: "آمن";
+        opacity: 0.50;
+    }
+
+    10% {
+        content: "آمن";
+        opacity: 1;
+    }
+
+    19% {
+        content: "آمن";
+        opacity: 0;
+    }
+
+    20% {
+        content: "بسيط";
+        opacity: 0;
+    }
+
+    30% {
+        content: "بسيط";
+        opacity: 1;
+    }
+
+    39% {
+        content: "بسيط";
+        opacity: 0;
+    }
+
+    40% {
+        content: "مربح";
+        opacity: 0;
+    }
+
+    50% {
+        content: "مربح";
+        opacity: 1;
+    }
+
+    59% {
+        content: "مربح";
+        opacity: 0;
+    }
+
+    60% {
+        content: "ذكي";
+        opacity: 0;
+    }
+
+    70% {
+        content: "ذكي";
+        opacity: 1;
+    }
+
+    79% {
+        content: "ذكي";
+        opacity: 0;
+    }
+
+    80% {
+        content: "سريع";
+        opacity: 0;
+    }
+
+    90% {
+        content: "سريع";
+        opacity: 1;
+    }
+
+    99% {
+        content: "سريع";
+        opacity: 0;
+    }
+
+    100% {
+        content: "آمن";
+        opacity: 0;
+    }
+}
+
+/* Apply Arabic Animation when RTL */
+[dir="rtl"] .changingtext::before {
+    animation-name: mychangea-rtl;
 }
 
 .tijarahub-content,
@@ -415,10 +508,12 @@ body.loaded .tijarahub-image {
         -o-transform: translateX(-350%);
     }
 }
+
 html[dir="rtl"] .scroll-container {
     animation: scrollrtl 30s linear infinite;
     -webkit-animation: scrollrtl 30s linear infinite;
 }
+
 @keyframes scrollrtl {
     from {
         transform: translateX(0);
@@ -432,6 +527,7 @@ html[dir="rtl"] .scroll-container {
         -o-transform: translateX(350%);
     }
 }
+
 .tijarahub-partners:hover .scroll-container {
     animation-play-state: paused;
 }
@@ -544,22 +640,24 @@ html[dir="rtl"] .scroll-container {
             -o-transform: translateX(-100%);
         }
     }
+
     html[dir="rtl"] .scroll-container {
         animation: scrollrtl 10s linear infinite;
         -webkit-animation: scrollrtl 10s linear infinite;
-}
+    }
+
     @keyframes scrollrtl {
         from {
             transform: translateX(0);
         }
-    
+
         to {
             transform: translateX(100%);
             -webkit-transform: translateX(100%);
             -moz-transform: translateX(100%);
             -ms-transform: translateX(100%);
             -o-transform: translateX(100%);
-}
+        }
     }
 }
 
@@ -679,22 +777,24 @@ html[dir="rtl"] .scroll-container {
             -o-transform: translateX(-70%);
         }
     }
+
     html[dir="rtl"] .scroll-container {
         animation: scrollrtl 20s linear infinite;
         -webkit-animation: scrollrtl 20s linear infinite;
-}
+    }
+
     @keyframes scrollrtl {
         from {
             transform: translateX(0);
         }
-    
+
         to {
             transform: translateX(70%);
             -webkit-transform: translateX(70%);
             -moz-transform: translateX(70%);
             -ms-transform: translateX(70%);
             -o-transform: translateX(70%);
-}
+        }
     }
 }
 
@@ -1890,20 +1990,20 @@ html[dir="rtl"] .scroll-container {
 
 .event-section i:first-child {
     z-index: 1;
-    transform: translateX(45%);
-    -webkit-transform: translateX(45%);
-    -moz-transform: translateX(45%);
-    -ms-transform: translateX(45%);
-    -o-transform: translateX(45%);
+    transform: translateX(10%);
+    -webkit-transform: translateX(10%);
+    -moz-transform: translateX(10%);
+    -ms-transform: translateX(10%);
+    -o-transform: translateX(10%);
 }
 
 .event-section i:last-child {
     z-index: 1;
-    transform: translateX(-45%);
-    -webkit-transform: translateX(-45%);
-    -moz-transform: translateX(-45%);
-    -ms-transform: translateX(-45%);
-    -o-transform: translateX(-45%);
+    transform: translateX(-10%);
+    -webkit-transform: translateX(-10%);
+    -moz-transform: translateX(-10%);
+    -ms-transform: translateX(-10%);
+    -o-transform: translateX(-10%);
 }
 
 .event-section .event-track {
@@ -2295,7 +2395,8 @@ ul.Both-Plans li p.desc {
 ul.pricing-features-ul li i {
     position: relative;
 }
-html[dir="rtl"] ul.pricing-features-ul li i{
+
+html[dir="rtl"] ul.pricing-features-ul li i {
     margin-right: 10px;
     margin-left: 0;
 }
@@ -3247,7 +3348,7 @@ ul.pricing-features-ul li.bg {
     color: var(--text-color);
     width: 100%;
     padding: 10px;
-    text-align: left;
+    text-align: start;
     font-size: 1.2rem;
     line-height: 1.4rem;
     border: none;
@@ -3271,6 +3372,10 @@ ul.pricing-features-ul li.bg {
 
 .faq-question.active .arrow {
     transform: rotate(90deg);
+}
+
+html[dir="rtl"] .faq-question.active .arrow {
+    transform: rotate(-90deg);
 }
 
 .faq-answer {
@@ -3411,3 +3516,194 @@ ul.pricing-features-ul li.bg {
 /*FAQ End Here*/
 
 /*----------------*/
+
+
+.gallery-container-section-wrapper{
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 10px;
+    background: url('Frame.png') repeat top center;
+    background-color: var(--background-color);
+}
+
+.gallery-container-section-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    margin-bottom: 40px;
+    width: 100%;
+    gap:20px ;
+}
+
+.gallery-container-section-title{
+    font-size: var(--large-font);
+    line-height: var(--line-height-title);
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    color: #fff;
+}
+
+.gallery-container-section-subtitle {
+    width: 100%;
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+    color: var(--accent-color);
+    padding: 0;
+    margin: 0;
+}
+
+.gallery-container {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 350px;
+}
+
+/* Wrapper container for images */
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 500px;    
+
+}
+
+/* General styles for images inside the wrapper */
+.wrapper .img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* Setting up the image properties with transition and initial clip-path */
+.wrapper .img img {
+    border-radius: 15px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    clip-path: circle(0% at 0% 100%);
+    transition: all 0.7s;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+/* Radio button logic to apply different clip-paths based on selection */
+
+/* When the first radio button is checked */
+#one:checked~.img-1 img {
+    clip-path: circle(150% at 0% 100%);
+}
+
+/* When the second radio button is checked */
+#two:checked~.img-1 img,
+#two:checked~.img-2 img {
+    clip-path: circle(150% at 0% 100%);
+}
+
+/* When the third radio button is checked */
+#three:checked~.img-1 img,
+#three:checked~.img-2 img,
+#three:checked~.img-3 img {
+    clip-path: circle(150% at 0% 100%);
+}
+
+/* When the fourth radio button is checked */
+#four:checked~.img-1 img,
+#four:checked~.img-2 img,
+#four:checked~.img-3 img,
+#four:checked~.img-4 img {
+    clip-path: circle(150% at 0% 100%);
+}
+
+/* When the fifth radio button is checked */
+#five:checked~.img-1 img,
+#five:checked~.img-2 img,
+#five:checked~.img-3 img,
+#five:checked~.img-4 img,
+#five:checked~.img-5 img {
+    clip-path: circle(150% at 0% 100%);
+}
+
+/* When the sixth radio button is checked */
+#six:checked~.img-1 img,
+#six:checked~.img-2 img,
+#six:checked~.img-3 img,
+#six:checked~.img-4 img,
+#six:checked~.img-5 img,
+#six:checked~.img-6 img {
+    /* Missing comma before this line */
+    clip-path: circle(150% at 0% 100%);
+}
+#seven:checked~.img-1 img,
+#seven:checked~.img-2 img,
+#seven:checked~.img-3 img,
+#seven:checked~.img-4 img,
+#seven:checked~.img-5 img,
+#seven:checked~.img-6 img,
+#seven:checked~.img-7 img {
+    /* Missing comma before this line */
+    clip-path: circle(150% at 0% 100%);
+}
+/* Slider controls container */
+.wrapper .sliders {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+    display: flex;
+}
+
+/* Style for individual slider labels (radio button labels) */
+.wrapper .sliders label {
+    border: 2px solid rgb(255, 252, 252);
+    width: 13px;
+    height: 13px;
+    margin: 0 3px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Style for the selected slider label */
+#one:checked~.sliders label.one,
+#two:checked~.sliders label.two,
+#three:checked~.sliders label.three,
+#four:checked~.sliders label.four,
+#five:checked~.sliders label.five,
+#six:checked~.sliders label.six,
+#seven:checked~.sliders label.seven {
+    /* Missing comma before this line */
+    width: 35px;
+    border-radius: 14px;
+    background: var(--accent-color);
+}
+
+/* Hover effect for slider labels */
+.sliders label:hover {
+    background: var(--accent-color);
+}
+
+/* Hide the radio input elements */
+input[type="radio"] {
+    display: none;
+}
+@media (min-width: 768px) {
+    .gallery-container-section-wrapper{
+        flex-direction: row;
+    }
+    .gallery-container-section-header{
+        margin-bottom: 20px;
+        width: 30%;
+    }
+}
