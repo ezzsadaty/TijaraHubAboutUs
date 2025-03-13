@@ -3517,31 +3517,33 @@ html[dir="rtl"] .faq-question.active .arrow {
 
 /*----------------*/
 
-
+/*Gallery Start Here*/
 .gallery-container-section-wrapper{
     width: 100%;
     display: flex;
-    box-sizing: border-box;
     justify-content: center;
     align-items: center;
     /* padding: 50px 10px; */
     padding: 50px 20px 100px 20px;
     background: url('Frame.png') repeat top center;
     background-color: var(--background-color);
+    box-sizing: border-box;
 }
 .gallery-container-section{
     max-width: 1400px;
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 
 }
 .gallery-container-section-header{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: start;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     margin-bottom: 40px;
     width: 100%;
     gap:20px ;
@@ -3741,8 +3743,8 @@ html[dir="rtl"] .faq-question.active .arrow {
 /* Style for individual slider labels (radio button labels) */
 .wrapper .sliders label {
     border: 2px solid rgb(255, 252, 252);
-    width: 13px;
-    height: 13px;
+    width: 10px;
+    height: 10px;
     margin: 0 3px;
     border-radius: 50%;
     cursor: pointer;
@@ -3775,7 +3777,10 @@ html[dir="rtl"] .faq-question.active .arrow {
 input[type="radio"] {
     display: none;
 }
-@media (min-width: 768px) {
+@media (min-width: 960px) {
+    .gallery-container-section{
+        flex-direction: row;
+    }
     .gallery-container-section-wrapper{
         flex-direction: row;
     }
