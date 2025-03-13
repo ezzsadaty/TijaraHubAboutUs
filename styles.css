@@ -3522,14 +3522,21 @@ html[dir="rtl"] .faq-question.active .arrow {
     width: 100%;
     display: flex;
     box-sizing: border-box;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    flex-direction: column;
-    padding: 50px 10px;
+    /* padding: 50px 10px; */
+    padding: 50px 20px 100px 20px;
     background: url('Frame.png') repeat top center;
     background-color: var(--background-color);
 }
+.gallery-container-section{
+    max-width: 1400px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
+}
 .gallery-container-section-header{
     display: flex;
     flex-direction: column;
@@ -3548,6 +3555,7 @@ html[dir="rtl"] .faq-question.active .arrow {
     padding: 0;
     width: 100%;
     color: #fff;
+
 }
 
 .gallery-container-section-subtitle {
@@ -3775,4 +3783,17 @@ input[type="radio"] {
         margin-bottom: 20px;
         width: 30%;
     }
+    .gallery-container-section-header{
+        width: 50%;
+    }
+    .gallery-container-section-title{
+        font-size: 3.5rem;
+        line-height: 3.9rem;
+    }
+    .gallery-container-section-subtitle{
+        font-size: 1.3rem;
+        line-height: 1.5rem;
+        margin-bottom: 60px;
+    }
+    
 }

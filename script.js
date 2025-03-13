@@ -53,8 +53,8 @@ document.addEventListener("DOMContentLoaded", function () {
             description: "Engage manufacturers instantly with our Push Notifications feature, delivering timely updates and personalized content directly to their devices. Our Events & Trade Missions service connects your business with international markets through curated events and missions.",
             image: "serv/Digitalmarketing.png"
         },
-        "Tailor made Market Research": {
-            title: "Tailor made Market Research",
+        "Tailor Made Market Research": {
+            title: "Tailor Made Market Research",
             description: "Our 360 Market Research & Insights service offers in-depth analysis of market trends, shelf prices, and competitors. Our Market Behavior Study analyzes how consumers and businesses act in the market.",
             image: "serv/market.png"
         },
