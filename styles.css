@@ -263,82 +263,82 @@ div.tijarahub-section div.homepagebox h2 {
 /* Arabic Animation for RTL */
 @keyframes mychangea-rtl {
     0% {
-        content: "آمن";
+        content: "اّمنة";
         opacity: 0.50;
     }
 
     10% {
-        content: "آمن";
+        content: "اّمنة";
         opacity: 1;
     }
 
     19% {
-        content: "آمن";
+        content: "سريعة";
         opacity: 0;
     }
 
     20% {
-        content: "بسيط";
+        content: "سريعة";
         opacity: 0;
     }
 
     30% {
-        content: "بسيط";
+        content: "سريعة";
         opacity: 1;
     }
 
     39% {
-        content: "بسيط";
+        content: "سريعة";
         opacity: 0;
     }
 
     40% {
-        content: "مربح";
+        content: "بسيطة";
         opacity: 0;
     }
 
     50% {
-        content: "مربح";
+        content: "بسيطة";
         opacity: 1;
     }
 
     59% {
-        content: "مربح";
+        content: "بسيطة";
         opacity: 0;
     }
 
     60% {
-        content: "ذكي";
+        content: "متكاملة";
         opacity: 0;
     }
 
     70% {
-        content: "ذكي";
+        content: "متكاملة";
         opacity: 1;
     }
 
     79% {
-        content: "ذكي";
+        content: "متكاملة";
         opacity: 0;
     }
 
     80% {
-        content: "سريع";
+        content: "مربحة";
         opacity: 0;
     }
 
     90% {
-        content: "سريع";
+        content: "مربحة";
         opacity: 1;
     }
 
     99% {
-        content: "سريع";
+        content: "مربحة";
         opacity: 0;
     }
 
     100% {
-        content: "آمن";
+        content: "اّمنة";
         opacity: 0;
     }
 }
