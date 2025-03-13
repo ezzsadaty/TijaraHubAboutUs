@@ -3786,10 +3786,8 @@ input[type="radio"] {
     }
     .gallery-container-section-header{
         margin-bottom: 20px;
-        width: 30%;
-    }
-    .gallery-container-section-header{
         width: 50%;
+        text-align: start;
     }
     .gallery-container-section-title{
         font-size: 3.5rem;
