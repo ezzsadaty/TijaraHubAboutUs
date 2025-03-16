@@ -267,3 +267,31 @@ document.getElementById('pricingButton').addEventListener('click', function () {
 // New Code By Ahmed End Here
 ////////////////////////////////////////////////////////////
 
+let currentSlide = 1;
+const totalSlides = 12;
+const intervalTime = 4000; // Change slide every 4 seconds
+
+function changeSlide() {
+    document.getElementById(`one`).checked = false;
+    document.getElementById(`two`).checked = false;
+    document.getElementById(`three`).checked = false;
+    document.getElementById(`four`).checked = false;
+    document.getElementById(`five`).checked = false;
+    document.getElementById(`six`).checked = false;
+    document.getElementById(`seven`).checked = false;
+    document.getElementById(`eight`).checked = false;
+    document.getElementById(`nine`).checked = false;
+    document.getElementById(`ten`).checked = false;
+    document.getElementById(`eleven`).checked = false;
+    document.getElementById(`twelve`).checked = false;
+
+    document.getElementById(`${numberToWord(currentSlide)}`).checked = true;
+    currentSlide = currentSlide < totalSlides ? currentSlide + 1 : 1;
+}
+
+function numberToWord(num) {
+    const words = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve"];
+    return words[num - 1];
+}
+
+setInterval(changeSlide, intervalTime);
