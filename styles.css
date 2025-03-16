@@ -3491,7 +3491,10 @@ html[dir="rtl"] .faq-question.active .arrow {
         background-size: cover;
         border-radius: 10px;
     }
-
+    html[dir="rtl"] .faq-image {
+        background: url('arFAQs.jpg') no-repeat center center;
+        background-size: cover;
+    }
     .faq-content {
         max-width: 800px;
         width: 60%;
@@ -3543,7 +3546,7 @@ html[dir="rtl"] .faq-question.active .arrow {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align: start;
     margin-bottom: 40px;
     width: 100%;
     gap:20px ;
@@ -3778,6 +3781,9 @@ input[type="radio"] {
     display: none;
 }
 @media (min-width: 960px) {
+    .gallery-container{
+        max-width: 40%;
+    }
     .gallery-container-section{
         flex-direction: row;
     }
