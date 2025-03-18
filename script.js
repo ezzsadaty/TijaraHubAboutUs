@@ -295,3 +295,14 @@ function numberToWord(num) {
 }
 
 setInterval(changeSlide, intervalTime);
+let isRTL = document.documentElement.getAttribute("dir") === "rtl";
+
+    if (isRTL) {
+        document.querySelectorAll('*').forEach(element => {
+    const currentLineHeight = window.getComputedStyle(element).lineHeight;
+    if (currentLineHeight && !isNaN(parseFloat(currentLineHeight))) {
+        const newLineHeight = parseFloat(currentLineHeight) + 5; // add 0.5rem (converted to px)
+        element.style.lineHeight = `${newLineHeight}px`;
+    }
+});
+    }
