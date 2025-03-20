@@ -2434,6 +2434,14 @@ ul.pricing-features-ul li i:hover::after {
     opacity: 1;
     visibility: visible;
 }
+ul.pricing-features-ul li i::after {
+    display: none;
+}
+
+/* If it has a data-title attribute, make it visible */
+ul.pricing-features-ul li i[data-title]::after {
+    display: block;
+}
 
 .plans-buttons {
     width: 100%;
