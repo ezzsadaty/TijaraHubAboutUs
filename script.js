@@ -306,3 +306,34 @@ let isRTL = document.documentElement.getAttribute("dir") === "rtl";
     }
 });
     }
+
+    const yearlyButton = document.getElementById("yearly");
+    const monthlyButton = document.getElementById("monthly");
+
+    const standardPrice = document.getElementById("standard-price");
+    const premiumPrice = document.getElementById("premium-price");
+
+    const yearlyPrices = {
+        standard: "192.5 ",
+        premium: "320 "
+    };
+
+    const monthlyPrices = {
+        standard: "275 ",
+        premium: "460 "
+    };
+
+    document.querySelector(".toggle-switch").addEventListener("click", function(event) {
+        if (event.target.id === "yearly" || event.target.id === "monthly") {
+            yearlyButton.classList.toggle("active", event.target.id === "yearly");
+            monthlyButton.classList.toggle("active", event.target.id === "monthly");
+
+            if (event.target.id === "yearly") {
+                standardPrice.innerText = yearlyPrices.standard;
+                premiumPrice.innerText = yearlyPrices.premium;
+            } else {
+                standardPrice.innerText = monthlyPrices.standard;
+                premiumPrice.innerText = monthlyPrices.premium;
+            }
+        }
+    });
