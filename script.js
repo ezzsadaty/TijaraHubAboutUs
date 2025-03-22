@@ -331,11 +331,21 @@ document.querySelector(".toggle-switch").addEventListener("click", function (eve
         if (event.target.id === "yearly") {
             standardPrice.innerText = yearlyPrices.standard;
             premiumPrice.innerText = yearlyPrices.premium;
-            updateFeatureText('yearly');
+            if (isRTL) {
+                updateFeatureTextAr('yearly');
+            }
+            else {
+                updateFeatureText('yearly');
+            }
         } else {
             standardPrice.innerText = monthlyPrices.standard;
             premiumPrice.innerText = monthlyPrices.premium;
-            updateFeatureText('monthly');
+            if (isRTL) {
+                updateFeatureTextAr('monthly');
+            }
+            else {
+                updateFeatureText('monthly');
+            }
         }
     }
 });
@@ -395,6 +405,64 @@ function updateFeatureText(toggleType) {
 
         // Add 'monthly-plan' class to all premium elements when monthly is selected
         document.querySelectorAll('#premium-sales, #premium-market, #premium-potenial, #premium-buyers, #premium-mission, #premium-design, #premium-proudct')
+            .forEach(element => element.classList.add('monthly-plan'));
+    }
+}
+
+function updateFeatureTextAr(toggleType) {
+    // Standard plan features in Arabic
+    if (toggleType === 'yearly') {
+        document.getElementById('standard-sales-ar').innerText = "1 موظف مبيعات";
+        document.getElementById('standard-market-ar').innerText = "1 مرة / سنة";
+        document.getElementById('standard-potenial-ar').innerText = "20 / ربع سنوي";
+        document.getElementById('standard-buyers-ar').innerText = "15 / ربع سنوي";
+        document.getElementById('standard-mission-ar').innerHTML = '<i class="fa-solid fa-check"></i>';
+        document.getElementById('standard-design-ar').innerText = "3 تصاميم / ربع سنوي";
+        document.getElementById('standard-proudct-ar').innerText = "الحد الأقصى 25";
+
+        // Remove the 'monthly-plan' class from all standard elements if any (optional)
+        document.querySelectorAll('#standard-sales-ar, #standard-market-ar, #standard-potenial-ar, #standard-buyers-ar, #standard-mission-ar, #standard-design-ar, #standard-proudct-ar')
+            .forEach(element => element.classList.remove('monthly-plan'));
+
+    } else {
+        document.getElementById('standard-sales-ar').innerHTML = "<i class='fa-solid fa-xmark'></i>";
+        document.getElementById('standard-market-ar').innerHTML = "<i class='fa-solid fa-xmark'></i>";
+        document.getElementById('standard-potenial-ar').innerText = "8 / ربع سنوي";
+        document.getElementById('standard-buyers-ar').innerText = "10 / ربع سنوي";
+        document.getElementById('standard-mission-ar').innerHTML = '<i class="fa-solid fa-xmark"></i>';
+        document.getElementById('standard-design-ar').innerText = "2 تصاميم / شهر";
+        document.getElementById('standard-proudct-ar').innerText = "الحد الأقصى 12";
+
+        // Add 'monthly-plan' class to all standard elements when monthly is selected
+        document.querySelectorAll('#standard-sales-ar, #standard-market-ar, #standard-potenial-ar, #standard-buyers-ar, #standard-mission-ar, #standard-design-ar, #standard-proudct-ar')
+            .forEach(element => element.classList.add('monthly-plan'));
+    }
+
+    // Premium plan features in Arabic
+    if (toggleType === 'yearly') {
+        document.getElementById('premium-sales-ar').innerText = "2 موظف مبيعات";
+        document.getElementById('premium-market-ar').innerText = "2 مرة / سنة";
+        document.getElementById('premium-potenial-ar').innerText = "40 / ربع سنوي";
+        document.getElementById('premium-buyers-ar').innerText = "30 / ربع سنوي";
+        document.getElementById('premium-mission-ar').innerHTML = '<i class="fa-solid fa-check"></i>';
+        document.getElementById('premium-design-ar').innerText = "6 تصاميم / شهر";
+        document.getElementById('premium-proudct-ar').innerText = "الحد الأقصى 60";
+
+        // Remove the 'monthly-plan' class from all premium elements if any (optional)
+        document.querySelectorAll('#premium-sales-ar, #premium-market-ar, #premium-potenial-ar, #premium-buyers-ar, #premium-mission-ar, #premium-design-ar, #premium-proudct-ar')
+            .forEach(element => element.classList.remove('monthly-plan'));
+
+    } else {
+        document.getElementById('premium-sales-ar').innerText = "1 موظف مبيعات";
+        document.getElementById('premium-market-ar').innerText = "مع تكلفة";
+        document.getElementById('premium-potenial-ar').innerText = "20 / ربع سنوي";
+        document.getElementById('premium-buyers-ar').innerText = "20 / ربع سنوي";
+        document.getElementById('premium-mission-ar').innerHTML = '<i class="fa-solid fa-xmark"></i>';
+        document.getElementById('premium-design-ar').innerText = "4 تصاميم / شهر";
+        document.getElementById('premium-proudct-ar').innerText = "الحد الأقصى 30";
+
+        // Add 'monthly-plan' class to all premium elements when monthly is selected
+        document.querySelectorAll('#premium-sales-ar, #premium-market-ar, #premium-potenial-ar, #premium-buyers-ar, #premium-mission-ar, #premium-design-ar, #premium-proudct-ar')
             .forEach(element => element.classList.add('monthly-plan'));
     }
 }
