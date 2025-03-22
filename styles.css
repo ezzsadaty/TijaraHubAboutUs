@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap');
+
 :root {
-    --font-family: 'Montserrat',sans-serif ;
-    --font-family-ar: 'El Messiri', 'Montserrat',sans-serif;
+    --font-family: 'Montserrat', sans-serif;
+    --font-family-ar: 'El Messiri', 'Montserrat', sans-serif;
     --dark-grey: rgb(54, 54, 54);
     --text-color: #fff;
     --background-color: #0f0f0f;
@@ -25,8 +26,9 @@ body {
     margin: 0;
 
 }
+
 html[dir="rtl"] body {
-    font-family:  var(--font-family-ar);
+    font-family: var(--font-family-ar);
 }
 
 /* *{
@@ -2397,9 +2399,13 @@ html[dir="rtl"] ul.pricing-features-ul li i {
     margin-left: 0;
 }
 
+.monthly-plan {
+    color: #ff5f29 !important;
+}
+
 ul.pricing-features-ul li i::after {
     content: attr(data-title);
-    /*Usedata-titleinsteadoftitle*/
+    /*Use data-title instead of title*/
     position: absolute;
     left: 50%;
     top: 100%;
@@ -2434,6 +2440,7 @@ ul.pricing-features-ul li i:hover::after {
     opacity: 1;
     visibility: visible;
 }
+
 ul.pricing-features-ul li i::after {
     display: none;
 }
@@ -3495,10 +3502,12 @@ html[dir="rtl"] .faq-question.active .arrow {
         background-size: cover;
         border-radius: 10px;
     }
+
     html[dir="rtl"] .faq-image {
         background: url('arFAQs.jpg') no-repeat center center;
         background-size: cover;
     }
+
     .faq-content {
         max-width: 800px;
         width: 60%;
@@ -3525,7 +3534,7 @@ html[dir="rtl"] .faq-question.active .arrow {
 /*----------------*/
 
 /*Gallery Start Here*/
-.gallery-container-section-wrapper{
+.gallery-container-section-wrapper {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -3536,7 +3545,8 @@ html[dir="rtl"] .faq-question.active .arrow {
     background-color: var(--background-color);
     box-sizing: border-box;
 }
-.gallery-container-section{
+
+.gallery-container-section {
     max-width: 1400px;
     width: 100%;
     display: flex;
@@ -3545,7 +3555,8 @@ html[dir="rtl"] .faq-question.active .arrow {
     align-items: center;
 
 }
-.gallery-container-section-header{
+
+.gallery-container-section-header {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -3553,10 +3564,10 @@ html[dir="rtl"] .faq-question.active .arrow {
     text-align: start;
     margin-bottom: 40px;
     width: 100%;
-    gap:20px ;
+    gap: 20px;
 }
 
-.gallery-container-section-title{
+.gallery-container-section-title {
     font-size: var(--large-font);
     line-height: var(--line-height-title);
     font-weight: bold;
@@ -3589,7 +3600,7 @@ html[dir="rtl"] .faq-question.active .arrow {
 .wrapper {
     position: relative;
     width: 100%;
-    height: 500px;    
+    height: 500px;
 
 }
 
@@ -3661,6 +3672,7 @@ html[dir="rtl"] .faq-question.active .arrow {
     /* Missing comma before this line */
     clip-path: circle(150% at 0% 100%);
 }
+
 #seven:checked~.img-1 img,
 #seven:checked~.img-2 img,
 #seven:checked~.img-3 img,
@@ -3671,6 +3683,7 @@ html[dir="rtl"] .faq-question.active .arrow {
     /* Missing comma before this line */
     clip-path: circle(150% at 0% 100%);
 }
+
 #eight:checked~.img-1 img,
 #eight:checked~.img-2 img,
 #eight:checked~.img-3 img,
@@ -3681,6 +3694,7 @@ html[dir="rtl"] .faq-question.active .arrow {
 #eight:checked~.img-8 img {
     clip-path: circle(150% at 0% 100%);
 }
+
 /* When the ninth radio button is checked */
 #nine:checked~.img-1 img,
 #nine:checked~.img-2 img,
@@ -3707,6 +3721,7 @@ html[dir="rtl"] .faq-question.active .arrow {
 #ten:checked~.img-10 img {
     clip-path: circle(150% at 0% 100%);
 }
+
 #eleven:checked~.img-1 img,
 #eleven:checked~.img-2 img,
 #eleven:checked~.img-3 img,
@@ -3770,11 +3785,12 @@ html[dir="rtl"] .faq-question.active .arrow {
 #nine:checked~.sliders label.nine,
 #ten:checked~.sliders label.ten,
 #eleven:checked~.sliders label.eleven,
-#twelve:checked~.sliders label.twelve{
+#twelve:checked~.sliders label.twelve {
     width: 35px;
     border-radius: 14px;
     background: var(--accent-color);
 }
+
 /* Hover effect for slider labels */
 .sliders label:hover {
     background: var(--accent-color);
@@ -3784,39 +3800,47 @@ html[dir="rtl"] .faq-question.active .arrow {
 input[type="radio"] {
     display: none;
 }
+
 @media (min-width: 960px) {
-    .gallery-container{
+    .gallery-container {
         max-width: 40%;
     }
-    .gallery-container-section{
+
+    .gallery-container-section {
         flex-direction: row;
     }
-    .gallery-container-section-wrapper{
+
+    .gallery-container-section-wrapper {
         flex-direction: row;
     }
-    .gallery-container-section-header{
+
+    .gallery-container-section-header {
         margin-bottom: 20px;
         width: 50%;
         text-align: start;
     }
-    .gallery-container-section-title{
+
+    .gallery-container-section-title {
         font-size: 3.5rem;
         line-height: 3.9rem;
     }
-    .gallery-container-section-subtitle{
+
+    .gallery-container-section-subtitle {
         font-size: 1.3rem;
         line-height: 1.5rem;
         margin-bottom: 60px;
     }
-    
+
 }
-.pricing-wrapper{
+
+.pricing-wrapper {
     display: flex;
     width: 100%;
     justify-content: center;
     box-sizing: border-box;
     margin: 10px 0;
 }
+
 .pricing-switcher-container {
     position: relative;
     box-sizing: border-box;
@@ -3845,10 +3869,12 @@ input[type="radio"] {
     left: 12px;
     clip-path: polygon(50% 100%, 0 0, 100% 0);
 }
+
 html[dir="rtl"] .discount-tag {
     top: -25px;
     left: 70px;
 }
+
 .toggle-switch {
     border: 1px solid #ccc;
     color: white;
@@ -3864,6 +3890,7 @@ html[dir="rtl"] .discount-tag {
     -ms-border-radius: 25px;
     -o-border-radius: 25px;
 }
+
 html[dir="rtl"] .toggle-switch {
     border-radius: 25px;
     -webkit-border-radius: 25px;
@@ -3871,10 +3898,12 @@ html[dir="rtl"] .toggle-switch {
     -ms-border-radius: 25px;
     -o-border-radius: 25px;
 }
+
 .toggle-switch span {
     padding: 5px 10px;
     border-radius: 15px;
 }
+
 html[dir="rtl"] .toggle-switch span {
     border-radius: 20px;
     -webkit-border-radius: 20px;
@@ -3882,8 +3911,9 @@ html[dir="rtl"] .toggle-switch span {
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
 }
+
 .toggle-switch .active {
     background-color: #eee;
-    
+
     color: var(--background-color);
 }

@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let isRTL = document.documentElement.getAttribute("dir") === "rtl";
 
     if (isRTL) {
-        
+
     }
     document.body.classList.add("loaded");
     // Counter Animation
@@ -297,15 +297,15 @@ function numberToWord(num) {
 setInterval(changeSlide, intervalTime);
 let isRTL = document.documentElement.getAttribute("dir") === "rtl";
 
-    if (isRTL) {
-        document.querySelectorAll('*').forEach(element => {
-    const currentLineHeight = window.getComputedStyle(element).lineHeight;
-    if (currentLineHeight && !isNaN(parseFloat(currentLineHeight))) {
-        const newLineHeight = parseFloat(currentLineHeight) + 5; // add 0.5rem (converted to px)
-        element.style.lineHeight = `${newLineHeight}px`;
-    }
-});
-    }
+if (isRTL) {
+    document.querySelectorAll('*').forEach(element => {
+        const currentLineHeight = window.getComputedStyle(element).lineHeight;
+        if (currentLineHeight && !isNaN(parseFloat(currentLineHeight))) {
+            const newLineHeight = parseFloat(currentLineHeight) + 5; // add 0.5rem (converted to px)
+            element.style.lineHeight = `${newLineHeight}px`;
+        }
+    });
+}
 
 const yearlyButton = document.getElementById("yearly");
 const monthlyButton = document.getElementById("monthly");
@@ -323,7 +323,7 @@ const monthlyPrices = {
     premium: "460 "
 };
 
-document.querySelector(".toggle-switch").addEventListener("click", function(event) {
+document.querySelector(".toggle-switch").addEventListener("click", function (event) {
     if (event.target.id === "yearly" || event.target.id === "monthly") {
         yearlyButton.classList.toggle("active", event.target.id === "yearly");
         monthlyButton.classList.toggle("active", event.target.id === "monthly");
@@ -331,9 +331,70 @@ document.querySelector(".toggle-switch").addEventListener("click", function(even
         if (event.target.id === "yearly") {
             standardPrice.innerText = yearlyPrices.standard;
             premiumPrice.innerText = yearlyPrices.premium;
+            updateFeatureText('yearly');
         } else {
             standardPrice.innerText = monthlyPrices.standard;
             premiumPrice.innerText = monthlyPrices.premium;
+            updateFeatureText('monthly');
         }
     }
 });
+
+// Function to update the feature text
+function updateFeatureText(toggleType) {
+    // Standard plan features
+    if (toggleType === 'yearly') {
+        document.getElementById('standard-sales').innerText = "1 Sales";
+        document.getElementById('standard-market').innerText = "1 Time / Year";
+        document.getElementById('standard-potenial').innerText = "20 / Quarter";
+        document.getElementById('standard-buyers').innerText = "15 / Quarter";
+        document.getElementById('standard-mission').innerHTML = '<i class="fa-solid fa-check"></i>';
+        document.getElementById('standard-design').innerText = "3 Designs / Quarter";
+        document.getElementById('standard-proudct').innerText = "Maximum 25";
+
+        // Remove the 'monthly-plan' class from all standard elements if any (optional)
+        document.querySelectorAll('#standard-sales, #standard-market, #standard-potenial, #standard-buyers, #standard-mission, #standard-design, #standard-proudct')
+            .forEach(element => element.classList.remove('monthly-plan'));
+
+    } else {
+        document.getElementById('standard-sales').innerHTML = "<i class='fa-solid fa-xmark'></i>";
+        document.getElementById('standard-market').innerHTML = "<i class='fa-solid fa-xmark'></i>";
+        document.getElementById('standard-potenial').innerText = "8 / Quarter";
+        document.getElementById('standard-buyers').innerText = "10 / Quarter";
+        document.getElementById('standard-mission').innerHTML = '<i class="fa-solid fa-xmark"></i>';
+        document.getElementById('standard-design').innerText = "2 Designs / Month";
+        document.getElementById('standard-proudct').innerText = "Maximum 12";
+
+        // Add 'monthly-plan' class to all standard elements when monthly is selected
+        document.querySelectorAll('#standard-sales, #standard-market, #standard-potenial, #standard-buyers, #standard-mission, #standard-design, #standard-proudct')
+            .forEach(element => element.classList.add('monthly-plan'));
+    }
+
+    // Premium plan features
+    if (toggleType === 'yearly') {
+        document.getElementById('premium-sales').innerText = "2 Sales";
+        document.getElementById('premium-market').innerText = "2 Times / Year";
+        document.getElementById('premium-potenial').innerText = "40 / Quarter";
+        document.getElementById('premium-buyers').innerText = "30 / Quarter";
+        document.getElementById('premium-mission').innerHTML = '<i class="fa-solid fa-check"></i>';
+        document.getElementById('premium-design').innerText = "6 Designs / Month";
+        document.getElementById('premium-proudct').innerText = "Maximum 60";
+
+        // Remove the 'monthly-plan' class from all premium elements if any (optional)
+        document.querySelectorAll('#premium-sales, #premium-market, #premium-potenial, #premium-buyers, #premium-mission, #premium-design, #premium-proudct')
+            .forEach(element => element.classList.remove('monthly-plan'));
+
+    } else {
+        document.getElementById('premium-sales').innerText = "1 Sales";
+        document.getElementById('premium-market').innerText = "with cost";
+        document.getElementById('premium-potenial').innerText = "20 / Quarter";
+        document.getElementById('premium-buyers').innerText = "20 / Quarter";
+        document.getElementById('premium-mission').innerHTML = '<i class="fa-solid fa-xmark"></i>';
+        document.getElementById('premium-design').innerText = "4 Designs / Month";
+        document.getElementById('premium-proudct').innerText = "Maximum 30";
+
+        // Add 'monthly-plan' class to all premium elements when monthly is selected
+        document.querySelectorAll('#premium-sales, #premium-market, #premium-potenial, #premium-buyers, #premium-mission, #premium-design, #premium-proudct')
+            .forEach(element => element.classList.add('monthly-plan'));
+    }
+}
