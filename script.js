@@ -353,13 +353,24 @@ document.querySelector(".toggle-switch").addEventListener("click", function (eve
 // Function to update the feature text
 function updateFeatureText(toggleType) {
     // Standard plan features
+    const yearlyPriceDiv1 = document.getElementById('Premium-yearly-price');
+    const yearlyPriceDiv2 = document.getElementById('Standard-yearly-price');
+
+    if (toggleType === 'yearly') {
+        yearlyPriceDiv1.style.display = 'flex';  // Show yearly price
+        yearlyPriceDiv2.style.display = 'flex';  // Hide monthly price
+    } else {
+        yearlyPriceDiv1.style.display = 'none';   // Hide yearly price
+        yearlyPriceDiv2.style.display = 'none'; // Show monthly price
+    }
+
     if (toggleType === 'yearly') {
         document.getElementById('standard-sales').innerText = "1 Sales";
         document.getElementById('standard-market').innerText = "1 Time / Year";
-        document.getElementById('standard-potenial').innerText = "20 / Quarter";
-        document.getElementById('standard-buyers').innerText = "15 / Quarter";
+        document.getElementById('standard-potenial').innerText = "8 / Month";
+        document.getElementById('standard-buyers').innerText = "6 / Month";
         document.getElementById('standard-mission').innerHTML = '<i class="fa-solid fa-check"></i>';
-        document.getElementById('standard-design').innerText = "3 Designs / Quarter";
+        document.getElementById('standard-design').innerText = "3 Designs / Month";
         document.getElementById('standard-proudct').innerText = "Maximum 25";
 
         // Remove the 'monthly-plan' class from all standard elements if any (optional)
@@ -368,9 +379,9 @@ function updateFeatureText(toggleType) {
 
     } else {
         document.getElementById('standard-sales').innerHTML = "<i class='fa-solid fa-xmark'></i>";
-        document.getElementById('standard-market').innerHTML = "<i class='fa-solid fa-xmark'></i>";
-        document.getElementById('standard-potenial').innerText = "8 / Quarter";
-        document.getElementById('standard-buyers').innerText = "10 / Quarter";
+        document.getElementById('standard-market').innerHTML = "With Cost";
+        document.getElementById('standard-potenial').innerText = "5 / Month";
+        document.getElementById('standard-buyers').innerText = "5 / Month";
         document.getElementById('standard-mission').innerHTML = '<i class="fa-solid fa-xmark"></i>';
         document.getElementById('standard-design').innerText = "2 Designs / Month";
         document.getElementById('standard-proudct').innerText = "Maximum 12";
@@ -384,8 +395,8 @@ function updateFeatureText(toggleType) {
     if (toggleType === 'yearly') {
         document.getElementById('premium-sales').innerText = "2 Sales";
         document.getElementById('premium-market').innerText = "2 Times / Year";
-        document.getElementById('premium-potenial').innerText = "40 / Quarter";
-        document.getElementById('premium-buyers').innerText = "30 / Quarter";
+        document.getElementById('premium-potenial').innerText = "15 / Month";
+        document.getElementById('premium-buyers').innerText = "12 / Month";
         document.getElementById('premium-mission').innerHTML = '<i class="fa-solid fa-check"></i>';
         document.getElementById('premium-design').innerText = "6 Designs / Month";
         document.getElementById('premium-proudct').innerText = "Maximum 60";
@@ -396,9 +407,9 @@ function updateFeatureText(toggleType) {
 
     } else {
         document.getElementById('premium-sales').innerText = "1 Sales";
-        document.getElementById('premium-market').innerText = "with cost";
-        document.getElementById('premium-potenial').innerText = "20 / Quarter";
-        document.getElementById('premium-buyers').innerText = "20 / Quarter";
+        document.getElementById('premium-market').innerText = "With Cost";
+        document.getElementById('premium-potenial').innerText = "12 / Month";
+        document.getElementById('premium-buyers').innerText = "10 / Month";
         document.getElementById('premium-mission').innerHTML = '<i class="fa-solid fa-xmark"></i>';
         document.getElementById('premium-design').innerText = "4 Designs / Month";
         document.getElementById('premium-proudct').innerText = "Maximum 30";
@@ -414,8 +425,8 @@ function updateFeatureTextAr(toggleType) {
     if (toggleType === 'yearly') {
         document.getElementById('standard-sales-ar').innerText = "1 موظف مبيعات";
         document.getElementById('standard-market-ar').innerText = "1 مرة / سنة";
-        document.getElementById('standard-potenial-ar').innerText = "20 / ربع سنوي";
-        document.getElementById('standard-buyers-ar').innerText = "15 / ربع سنوي";
+        document.getElementById('standard-potenial-ar').innerText = "8 / ربع سنوي";
+        document.getElementById('standard-buyers-ar').innerText = "6 / ربع سنوي";
         document.getElementById('standard-mission-ar').innerHTML = '<i class="fa-solid fa-check"></i>';
         document.getElementById('standard-design-ar').innerText = "3 تصاميم / ربع سنوي";
         document.getElementById('standard-proudct-ar').innerText = "الحد الأقصى 25";
@@ -427,8 +438,8 @@ function updateFeatureTextAr(toggleType) {
     } else {
         document.getElementById('standard-sales-ar').innerHTML = "<i class='fa-solid fa-xmark'></i>";
         document.getElementById('standard-market-ar').innerHTML = "<i class='fa-solid fa-xmark'></i>";
-        document.getElementById('standard-potenial-ar').innerText = "8 / ربع سنوي";
-        document.getElementById('standard-buyers-ar').innerText = "10 / ربع سنوي";
+        document.getElementById('standard-potenial-ar').innerText = "5 / ربع سنوي";
+        document.getElementById('standard-buyers-ar').innerText = "5 / ربع سنوي";
         document.getElementById('standard-mission-ar').innerHTML = '<i class="fa-solid fa-xmark"></i>';
         document.getElementById('standard-design-ar').innerText = "2 تصاميم / شهر";
         document.getElementById('standard-proudct-ar').innerText = "الحد الأقصى 12";
@@ -442,8 +453,8 @@ function updateFeatureTextAr(toggleType) {
     if (toggleType === 'yearly') {
         document.getElementById('premium-sales-ar').innerText = "2 موظف مبيعات";
         document.getElementById('premium-market-ar').innerText = "2 مرة / سنة";
-        document.getElementById('premium-potenial-ar').innerText = "40 / ربع سنوي";
-        document.getElementById('premium-buyers-ar').innerText = "30 / ربع سنوي";
+        document.getElementById('premium-potenial-ar').innerText = "15 / ربع سنوي";
+        document.getElementById('premium-buyers-ar').innerText = "12 / ربع سنوي";
         document.getElementById('premium-mission-ar').innerHTML = '<i class="fa-solid fa-check"></i>';
         document.getElementById('premium-design-ar').innerText = "6 تصاميم / شهر";
         document.getElementById('premium-proudct-ar').innerText = "الحد الأقصى 60";
@@ -455,8 +466,8 @@ function updateFeatureTextAr(toggleType) {
     } else {
         document.getElementById('premium-sales-ar').innerText = "1 موظف مبيعات";
         document.getElementById('premium-market-ar').innerText = "مع تكلفة";
-        document.getElementById('premium-potenial-ar').innerText = "20 / ربع سنوي";
-        document.getElementById('premium-buyers-ar').innerText = "20 / ربع سنوي";
+        document.getElementById('premium-potenial-ar').innerText = "12 / ربع سنوي";
+        document.getElementById('premium-buyers-ar').innerText = "10 / ربع سنوي";
         document.getElementById('premium-mission-ar').innerHTML = '<i class="fa-solid fa-xmark"></i>';
         document.getElementById('premium-design-ar').innerText = "4 تصاميم / شهر";
         document.getElementById('premium-proudct-ar').innerText = "الحد الأقصى 30";

@@ -461,6 +461,7 @@ body.loaded .tijarahub-image {
 
 .counter,
 .title-font {
+    font-family: "Montserrat", sans-serif;
     font-size: var(--title-font-size);
     font-weight: bold;
     color: var(--accent-color);
@@ -2558,7 +2559,7 @@ ul.pricing-features-ul li i[data-title]::after {
     justify-content: center;
     align-items: center;
     font-size: 0.9rem;
-    line-height: 1.1rem;
+    line-height: 0.1rem;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -2749,7 +2750,7 @@ ul.pricing-features-ul li.bg {
 
     .pricing-cost {
         font-size: 1.1rem;
-        line-height: 1.3rem;
+        line-height: 0.3rem;
     }
 
     .pricing-features {
@@ -2920,7 +2921,7 @@ ul.pricing-features-ul li.bg {
 
     .pricing-cost {
         font-size: 1.2rem;
-        line-height: 1.4rem;
+        line-height: 0.4rem;
     }
 
     li[role="img"] {
@@ -3838,7 +3839,7 @@ input[type="radio"] {
     width: 100%;
     justify-content: center;
     box-sizing: border-box;
-    margin: 10px 0;
+    margin: 35px 0 10px 0;
 }
 
 .pricing-switcher-container {
