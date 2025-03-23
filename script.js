@@ -421,14 +421,25 @@ function updateFeatureText(toggleType) {
 }
 
 function updateFeatureTextAr(toggleType) {
+    const yearlyPriceDiv1 = document.getElementById('Premium-yearly-price');
+    const yearlyPriceDiv2 = document.getElementById('Standard-yearly-price');
+
+    if (toggleType === 'yearly') {
+        yearlyPriceDiv1.style.display = 'flex';  // Show yearly price
+        yearlyPriceDiv2.style.display = 'flex';  // Hide monthly price
+    } else {
+        yearlyPriceDiv1.style.display = 'none';   // Hide yearly price
+        yearlyPriceDiv2.style.display = 'none'; // Show monthly price
+    }
+
     // Standard plan features in Arabic
     if (toggleType === 'yearly') {
         document.getElementById('standard-sales-ar').innerText = "1 موظف مبيعات";
         document.getElementById('standard-market-ar').innerText = "1 مرة / سنة";
-        document.getElementById('standard-potenial-ar').innerText = "8 / ربع سنوي";
-        document.getElementById('standard-buyers-ar').innerText = "6 / ربع سنوي";
+        document.getElementById('standard-potenial-ar').innerText = "8 / شهر";
+        document.getElementById('standard-buyers-ar').innerText = "6 / شهر";
         document.getElementById('standard-mission-ar').innerHTML = '<i class="fa-solid fa-check"></i>';
-        document.getElementById('standard-design-ar').innerText = "3 تصاميم / ربع سنوي";
+        document.getElementById('standard-design-ar').innerText = "3 تصاميم / شهر";
         document.getElementById('standard-proudct-ar').innerText = "الحد الأقصى 25";
 
         // Remove the 'monthly-plan' class from all standard elements if any (optional)
@@ -437,9 +448,9 @@ function updateFeatureTextAr(toggleType) {
 
     } else {
         document.getElementById('standard-sales-ar').innerHTML = "<i class='fa-solid fa-xmark'></i>";
-        document.getElementById('standard-market-ar').innerHTML = "<i class='fa-solid fa-xmark'></i>";
-        document.getElementById('standard-potenial-ar').innerText = "5 / ربع سنوي";
-        document.getElementById('standard-buyers-ar').innerText = "5 / ربع سنوي";
+        document.getElementById('standard-market-ar').innerText = "مع تكلفة";
+        document.getElementById('standard-potenial-ar').innerText = "5 / شهر";
+        document.getElementById('standard-buyers-ar').innerText = "5 / شهر";
         document.getElementById('standard-mission-ar').innerHTML = '<i class="fa-solid fa-xmark"></i>';
         document.getElementById('standard-design-ar').innerText = "2 تصاميم / شهر";
         document.getElementById('standard-proudct-ar').innerText = "الحد الأقصى 12";
@@ -453,8 +464,8 @@ function updateFeatureTextAr(toggleType) {
     if (toggleType === 'yearly') {
         document.getElementById('premium-sales-ar').innerText = "2 موظف مبيعات";
         document.getElementById('premium-market-ar').innerText = "2 مرة / سنة";
-        document.getElementById('premium-potenial-ar').innerText = "15 / ربع سنوي";
-        document.getElementById('premium-buyers-ar').innerText = "12 / ربع سنوي";
+        document.getElementById('premium-potenial-ar').innerText = "15 / شهر";
+        document.getElementById('premium-buyers-ar').innerText = "12 / شهر";
         document.getElementById('premium-mission-ar').innerHTML = '<i class="fa-solid fa-check"></i>';
         document.getElementById('premium-design-ar').innerText = "6 تصاميم / شهر";
         document.getElementById('premium-proudct-ar').innerText = "الحد الأقصى 60";
@@ -466,8 +477,8 @@ function updateFeatureTextAr(toggleType) {
     } else {
         document.getElementById('premium-sales-ar').innerText = "1 موظف مبيعات";
         document.getElementById('premium-market-ar').innerText = "مع تكلفة";
-        document.getElementById('premium-potenial-ar').innerText = "12 / ربع سنوي";
-        document.getElementById('premium-buyers-ar').innerText = "10 / ربع سنوي";
+        document.getElementById('premium-potenial-ar').innerText = "12 / شهر";
+        document.getElementById('premium-buyers-ar').innerText = "10 / شهر";
         document.getElementById('premium-mission-ar').innerHTML = '<i class="fa-solid fa-xmark"></i>';
         document.getElementById('premium-design-ar').innerText = "4 تصاميم / شهر";
         document.getElementById('premium-proudct-ar').innerText = "الحد الأقصى 30";
