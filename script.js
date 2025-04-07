@@ -356,19 +356,19 @@ function updateFeatureText(toggleType) {
     const yearlyPriceDiv1 = document.getElementById('Premium-yearly-price');
     const yearlyPriceDiv2 = document.getElementById('Standard-yearly-price');
     const pricingButtonPremium = document.getElementById('pricing-button-Premium');
-    const pricingButtonStandard = document.getElementById('pricing-button-Standard');
+    const pricingButtonStandard = document.getElementById('pricing-button-standard');
 
 
     if (toggleType === 'yearly') {
         yearlyPriceDiv1.style.display = 'flex';  // Show yearly price
         yearlyPriceDiv2.style.display = 'flex';  // Hide monthly price
-        pricingButtonPremium.href = "https://tijarahub.com/vendor-registration/?plan_id=6";
-        pricingButtonStandard.href = "https://tijarahub.com/vendor-registration/?plan_id=5";
+        pricingButtonPremium.href = "https://seller.tijarahub.com/?plan_id=6";
+        pricingButtonStandard.href = "https://seller.tijarahub.com/?plan_id=5";
     } else {
         yearlyPriceDiv1.style.display = 'none';   // Hide yearly price
         yearlyPriceDiv2.style.display = 'none'; // Show monthly price
-        pricingButtonPremium.href = "https://tijarahub.com/vendor-registration/?plan_id=4";
-        pricingButtonStandard.href = "https://tijarahub.com/vendor-registration/?plan_id=3";
+        pricingButtonPremium.href = "https://seller.tijarahub.com/?plan_id=4";
+        pricingButtonStandard.href = "https://seller.tijarahub.com/?plan_id=3";
     }
 
     if (toggleType === 'yearly') {
