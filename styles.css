@@ -349,26 +349,7 @@ div.tijarahub-section div.homepagebox h2 {
 }
 
 /* Apply Arabic Animation when RTL */
-[dir="rtl"] .changingtext::before {
-    animation-name: mychangea-rtl;
-}
 
-.tijarahub-content,
-.tijarahub-image {
-    opacity: 0;
-    transform: scale(0.8);
-    transition: opacity 1s linear, transform 1s linear;
-    -webkit-transition: opacity 1s linear, transform 1s linear;
-    -moz-transition: opacity 1s linear, transform 1s linear;
-    -ms-transition: opacity 1s linear, transform 1s linear;
-    -o-transition: opacity 1s linear, transform 1s linear;
-}
-
-body.loaded .tijarahub-content,
-body.loaded .tijarahub-image {
-    opacity: 1;
-    transform: scale(1);
-}
 
 /* Animation for Whole Section End Here*/
 
@@ -413,14 +394,7 @@ body.loaded .tijarahub-image {
     margin: 0;
     padding: 0;
     margin: 10px 0;
-    opacity: 0;
-    transform: scale(0.8);
     max-width: 100%;
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-    -webkit-transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-    -moz-transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-    -ms-transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-    -o-transition: opacity 1s ease-in-out, transform 1s ease-in-out;
     border-radius: 25px;
     -webkit-border-radius: 25px;
     -moz-border-radius: 25px;

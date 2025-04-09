@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (isRTL) {
 
     }
-    document.body.classList.add("loaded");
+    
     // Counter Animation
     const counters = document.querySelectorAll(".counter");
     counters.forEach(counter => {
