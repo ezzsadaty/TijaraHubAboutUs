@@ -495,3 +495,24 @@ function updateFeatureTextAr(toggleType) {
             .forEach(element => element.classList.add('monthly-plan'));
     }
 }
+function extractYouTubeId(url) {
+    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+    const match = url.match(regExp);
+    return (match && match[2].length === 11) ? match[2] : null;
+}
+
+document.querySelectorAll('.video-item').forEach(item => {
+    const videoUrl = item.dataset.videoUrl;
+    const videoId = extractYouTubeId(videoUrl);
+    
+    // Set thumbnail image
+    if (videoId) {
+        const thumbnail = item.querySelector('.thumbnail');
+        thumbnail.style.backgroundImage = `url(https://img.youtube.com/vi/${videoId}/0.jpg)`;
+    }
+
+    // Add click handler
+    item.addEventListener('click', () => {
+        window.open(videoUrl, '_blank');
+    });
+});
