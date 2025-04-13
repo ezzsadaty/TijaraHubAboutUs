@@ -142,6 +142,9 @@ html[dir="rtl"] body {
     animation-timing-function: ease-in-out;
 
 }
+[dir="rtl"] .changingtext::before {
+    animation-name: mychangea-rtl;
+}
 
 .tijarahub-title {
     display: flex;
