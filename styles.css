@@ -36,14 +36,16 @@ html[dir="rtl"] body {
 } */
 
 .language-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
     display: flex;
     gap: 10px;
-    z-index: 1000;
+    background-color: var(--background-color);
+    padding-top: 50px;
+    padding-left: 50px;
 }
-
+html[dir="rtl"] .language-toggle {
+    padding-left: 0;
+    padding-right: 50px;
+}
 .lang-btn {
     padding: 15px 25px;
     font-size: 14px;
