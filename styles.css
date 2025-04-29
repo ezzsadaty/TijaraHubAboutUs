@@ -39,12 +39,12 @@ html[dir="rtl"] body {
     display: flex;
     gap: 10px;
     background-color: var(--background-color);
-    padding-top: 50px;
-    padding-left: 50px;
+    padding-top: 30px;
+    padding-left: 35px;
 }
 html[dir="rtl"] .language-toggle {
     padding-left: 0;
-    padding-right: 50px;
+    padding-right: 35px;
 }
 .lang-btn {
     padding: 15px 25px;
@@ -76,10 +76,6 @@ html[dir="rtl"] .language-toggle {
     background-color: var(--accent-color);
 }
 
-html[dir="rtl"] .language-toggle {
-    right: auto;
-    left: 20px;
-}
 .toggle-container {
     display: flex;
     justify-content: flex-start;
