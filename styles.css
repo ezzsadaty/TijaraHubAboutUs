@@ -38,9 +38,10 @@ html[dir="rtl"] body {
 .language-toggle {
     display: flex;
     gap: 10px;
-    background-color: var(--background-color);
     padding-top: 30px;
     padding-left: 35px;
+    background: url('Frame.png') repeat top center;
+    background-color: black;
 }
 html[dir="rtl"] .language-toggle {
     padding-left: 0;
@@ -59,11 +60,23 @@ html[dir="rtl"] .language-toggle {
     -moz-border-radius: 6px;
     -ms-border-radius: 6px;
     -o-border-radius: 6px;
+    -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    -ms-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
 }
-
+.trial {
+    color: var(--accent-color);
+    width: 80%;
+    text-align: center;
+    font-size: 14px;
+}
 @media (max-width: 767px) {
     .lang-btn {
         padding: 8px 15px;
+        font-size: 12px;
+    }
+    .trial{
         font-size: 12px;
     }
 }
