@@ -45,14 +45,25 @@ html[dir="rtl"] body {
 }
 
 .lang-btn {
-    padding: 8px 16px;
+    padding: 15px 25px;
     font-size: 14px;
     cursor: pointer;
     border: none;
     background-color: var(--box-background);
     color: white;
-    border-radius: 5px;
+    border-radius: 6px;
     transition: background-color 0.3s ease;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+
+@media (max-width: 767px) {
+    .lang-btn {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
 }
 
 .lang-btn:hover {
