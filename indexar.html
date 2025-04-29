@@ -28,9 +28,30 @@
       "url": "https://services.tijarahub.com/indexar.html"
     }
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const langButtons = document.querySelectorAll('.lang-btn');
+            
+            langButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const lang = this.getAttribute('data-lang');
+                    
+                    if (lang === 'ar') {
+                        window.location.href = 'https://services.tijarahub.com/indexar.html';
+                    } else if (lang === 'en') {
+                        window.location.href = 'https://services.tijarahub.com/';
+                    }
+                });
+            });
+        });
+    </script>
 </head>
 
 <body>
+    <div class="language-toggle">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn active" data-lang="ar">AR</button>
+    </div>
     <div class="toggle-container">
         <button id="pricingButton" class="toggle-button">خطط التسعير<i class="fa-solid fa-arrow-down"></i></button>
     </div>
