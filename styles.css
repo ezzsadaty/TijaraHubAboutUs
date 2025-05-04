@@ -82,6 +82,10 @@ html[dir="rtl"] .language-toggle {
     }
     .trial{
         font-size: 12px;
+        line-height: 15px;
+    }
+    .language-toggle {
+        padding-left: 10px;
     }
 }
 
