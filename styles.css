@@ -56,6 +56,13 @@ html[dir="rtl"] .language-toggle {
     border: none;
     background-color: var(--box-background);
     color: white;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 50px;
+    min-height: 50px;
     border-radius: 6px;
     transition: background-color 0.3s ease;
     -webkit-border-radius: 6px;
@@ -67,6 +74,14 @@ html[dir="rtl"] .language-toggle {
     -ms-transition: background-color 0.3s ease;
     -o-transition: background-color 0.3s ease;
 }
+.lang-btn:nth-child(3) {
+    background-image: url('Logos-15.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-size: 100% 100%;
+}
+
 .trial {
     font-family: "Kaushan Script", cursive;
     color: var(--accent-color);
